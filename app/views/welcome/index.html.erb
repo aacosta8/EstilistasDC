@@ -1,0 +1,90 @@
+
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <link rel="stylesheet" type="text/css" href="css/default.css">
+      <link rel="stylesheet" type="text/css" href="css/component.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+      <div class="container">
+        <header>
+          <h1>Estilistas de Corazón</h1>
+        </header>
+      </div>
+      <div class="main clearfix" >
+        <nav id="menu" class="nav">         
+          <ul>
+            <li>
+              <a ng-href="#/main">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-home"></i>
+                </span>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#/sobreNosotros">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-team"></i>
+                </span>
+                <span>Sobre nosotros</span>
+              </a>
+            </li>
+            <li>
+              <a href="#/testimonios">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-blog"></i>
+                </span>
+                <span>Testimonios</span>
+              </a>
+            </li>
+            <li>
+              <a ng-href="#/contact">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-contact"></i>
+                </span>
+                <span>Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="#/noticias">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-services"></i>
+                </span>
+                <span>Noticias</span>
+              </a>
+            </li>
+            <li>
+             <a href="#/login">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-team"></i>
+              </span>
+              <span>Iniciar sesión</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <br>
+      <br>
+
+
+
+      <!-- Add your site or application content here -->
+
+
+
+
+      <div class="container">
+        <div ng-view=""></div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
+      </div>
+    </div>
+
+
