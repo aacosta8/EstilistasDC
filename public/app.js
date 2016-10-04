@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular.module('pi1App', ['ui.router'])
 .config(function ($routeProvider) {
   $routeProvider
