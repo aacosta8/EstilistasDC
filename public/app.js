@@ -9,45 +9,25 @@
  * Main module of the application.
  */
 
-angular.module('pi1App', ['ui.router'])
-.config(function ($routeProvider) {
+ var app = angular.module("estilistasDC", ["ngRoute"]);
+ app.config(function($routeProvider) {
   $routeProvider
-  .when('/', {
-    templateUrl: '/main.html',
-    controller: 'welcome',
-    controllerAs: 'welcome'
+  .when("/", {
+    templateUrl : "/main.html"
   })
-  .when('/sobreNosotros', {
-    templateUrl: 'views/sobreNosotros.html',
-    controller: 'SobreNosotrosCtrl',
-    controllerAs: 'sobreNosotros'
+  .when("/sobreNosotros", {
+    templateUrl : "sobreNosotros.html"
   })
-  .when('/contact', {
-    templateUrl: 'views/contact.html',
-    controller: 'ContactCtrl',
-    controllerAs: 'contact'
+  .when("/testimonios", {
+    templateUrl : "testimonios.html"
   })
-  .when('/login', {
-    templateUrl: 'views/login.html',
-    controller: 'LoginCtrl',
-    controllerAs: 'login'
+  .when("/contact", {
+    templateUrl : "contact.html"
   })
-  .when('/testimonios', {
-    templateUrl: 'views/testimonios.html',
-    controller: 'TestimoniosCtrl',
-    controllerAs: 'testimonios'
+  .when("/login", {
+    templateUrl : "login.html"
   })
-  .when('/noticias', {
-    templateUrl: 'views/noticias.html',
-    controller: 'NoticiasCtrl',
-    controllerAs: 'noticias'
-  })
-  .when('/registro', {
-    templateUrl: 'views/registro.html',
-    controller: 'RegistroCtrl',
-    controllerAs: 'registro'
-  })
-  .otherwise({
-    redirectTo: '/'
+  .when("/noticias", {
+    templateUrl : "noticias.html"
   });
 });

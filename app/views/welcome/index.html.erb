@@ -2,20 +2,19 @@
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
+      
       <link rel="stylesheet" type="text/css" href="css/default.css">
       <link rel="stylesheet" type="text/css" href="css/component.css">
-      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-      <script type="text/javascript" src="app.js"></script>
       <div class="container">
         <header>
           <h1>Estilistas de Corazón</h1>
         </header>
       </div>
-      <div class="main clearfix" >
+      <div class="main clearfix" ng-app="estilistasDC">
         <nav id="menu" class="nav">         
           <ul>
             <li>
-              <a ng-href="#/main">
+            <a ng-href="#/">
                 <span class="icon">
                   <i aria-hidden="true" class="icon-home"></i>
                 </span>
@@ -39,7 +38,7 @@
               </a>
             </li>
             <li>
-              <a ng-href="#/contact">
+              <a href="#/contact">
                 <span class="icon">
                   <i aria-hidden="true" class="icon-contact"></i>
                 </span>
@@ -88,3 +87,5 @@
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
