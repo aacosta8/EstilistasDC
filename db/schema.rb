@@ -59,8 +59,12 @@ ActiveRecord::Schema.define(version: 0) do
     t.binary "fotoexp"
   end
 
-# Could not dump table "horario" because of following StandardError
-#   Unknown type 'time with time zone' for column 'horainicio'
+  create_table "horario", primary_key: "idhorario", id: :string, force: :cascade do |t|
+    t.date   "fecha",       null: false
+    t.time   "horainicio",  null: false
+    t.time   "horafin",     null: false
+    t.string "idestilista", null: false
+  end
 
   create_table "persona", primary_key: "idpersona", id: :string, force: :cascade do |t|
     t.string  "nombre",          null: false
