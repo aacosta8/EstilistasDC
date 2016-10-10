@@ -13,8 +13,8 @@ development:
   adapter: postgresql
   database: estilistasdecorazon
   pool: 5
-  username: jossava
-  password: '123'
+  username: alex
+  password: '32205045'
   host: localhost
   port: 5432
 
@@ -29,8 +29,8 @@ production:
   adapter: postgresql
   database: estilistasdecorazon
   pool: 5
-  username: jossava
-  password: '123'
+  username: alex
+  password: '32205045'
   host: localhost
   port: 5432
   
