@@ -11,10 +11,10 @@ default: &default
 
 development:
   adapter: postgresql
-  database: estilistas_de_corazon
+  database: estilistasdecorazon
   pool: 5
-  username: alex
-  password: '32205045'
+  username: jossava
+  password: '123'
   host: localhost
   port: 5432
 
@@ -27,10 +27,11 @@ test:
 
 production:
   adapter: postgresql
-  database: estilistas_de_corazon
+  database: estilistasdecorazon
   pool: 5
-  username: alex
-  password: '32205045'
+  username: jossava
+  password: '123'
   host: localhost
   port: 5432
   
+
