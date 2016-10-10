@@ -1,0 +1,2 @@
+class EstilistasController < ApplicationController
+end
