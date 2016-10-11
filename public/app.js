@@ -9,13 +9,8 @@
  * Main module of the application.
  */
 
- /*
-angular.module('pi1App', ['ui.router'])
-.config(function ($routeProvider) {
-=======
  var app = angular.module("estilistasDC", ["ngRoute"]);
  app.config(function($routeProvider) {
->>>>>>> master
   $routeProvider
   .when("/", {
     templateUrl : "/main.html"
@@ -34,6 +29,8 @@ angular.module('pi1App', ['ui.router'])
   })
   .when("/noticias", {
     templateUrl : "noticias.html"
+  })
+  .when("/registro", {
+    templateUrl : "registro.html"
   });
 });
-*/

@@ -21,5 +21,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-/app/assets/bower_components
+/public/bower_components
 /config/database.yml
