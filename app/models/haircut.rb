@@ -1,0 +1,2 @@
+class Haircut < ApplicationRecord
+end

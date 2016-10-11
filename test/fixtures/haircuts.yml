@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_corte: MyString
+  descripcion: MyString
+  foto: MyString
+
+two:
+  nombre_corte: MyString
+  descripcion: MyString
+  foto: MyString

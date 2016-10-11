@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2016-10-10
+  hora_inicio: 2016-10-10 23:27:52
+  hora_fin: 2016-10-10 23:27:52
+  stylist: one
+
+two:
+  fecha: 2016-10-10
+  hora_inicio: 2016-10-10 23:27:52
+  hora_fin: 2016-10-10 23:27:52
+  stylist: two

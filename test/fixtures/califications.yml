@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stylist: one
+  customer: one
+  calificacion: 1
+
+two:
+  stylist: two
+  customer: two
+  calificacion: 1

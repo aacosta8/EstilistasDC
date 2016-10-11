@@ -1,0 +1,2 @@
+class Ubication < ApplicationRecord
+end
