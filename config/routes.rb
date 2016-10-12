@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/noticias'  => 'welcome#noticias'
   get '/login'  => 'welcome#login'
   get '/registro'  => 'welcome#registro'
+  post '/entrar' => 'welcome#entrar'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
