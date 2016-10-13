@@ -13,7 +13,7 @@
  app.config(function($routeProvider) {
   $routeProvider
   .when("/", {
-    templateUrl : "/main.html"
+    templateUrl : "main.html"
   })
   .when("/sobreNosotros", {
     templateUrl : "sobreNosotros.html"
@@ -32,5 +32,26 @@
   })
   .when("/registro", {
     templateUrl : "registro.html"
+  })
+  .when("/inicioest", {
+    templateUrl : "inicioest.html"
+  })
+  .when("estilistas/perfilest", {
+    templateUrl : "perfilest.html"
+  })
+  .when("estilistas/cortesest", {
+    templateUrl : "cortesest.html"
+  })
+  .when("estilistas/agendaest", {
+    templateUrl : "agendaest.html"
+  })
+  .when("estilistas/citaspest", {
+    templateUrl : "citaspest.html"
+  })
+  .when("estilistas/pubexpest", {
+    templateUrl : "pubexpest.html"
+  })
+  .when("estilistas/verexpest", {
+    templateUrl : "verexpest.html"
   });
 });
