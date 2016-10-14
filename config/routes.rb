@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root 'clientes#index_clientes'
-  get '/clientes/perfil', to: 'clientes#perfil'
   get '/main'  => 'clientes#main'
   get '/perfil' => 'clientes#perfil'
   get '/misCitas' => 'clientes#misCitas'

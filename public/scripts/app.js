@@ -53,5 +53,20 @@
   })
   .when("estilistas/verexpest", {
     templateUrl : "verexpest.html"
+  })
+  .when("/perfil", {
+    templateUrl : "perfil.html"
+  })
+  .when("/misCitas", {
+    templateUrl : "misCitas.html"
+  })
+  .when("/puntosCercanos", {
+    templateUrl : "puntosCercanos.html"
+  })
+  .when("/estilistas", {
+    templateUrl : "estilistas.html"
+  })
+  .when("/experiencias", {
+    templateUrl : "experiencias.html"
   });
 });
