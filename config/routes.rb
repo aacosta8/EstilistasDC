@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'clientes/iniciocli'
+  root 'clientes#index_clientes'
+  get '/main'  => 'clientes#main'
+  get '/perfil' => 'clientes#perfil'
+  get '/misCitas' => 'clientes#misCitas'
+  get '/puntosCercanos' => 'clientes#puntosCercanos'
+  get '/estilistas' => 'clientes#estilistas'
+  get '/experiencias' => 'clientes#experiencias'
 
-  root 'welcome#index#main'
+
+  root 'estilistas#inicioest'
   get '/main'  => 'welcome#main'
   get '/sobreNosotros'  => 'welcome#sobreNosotros'
   get '/testimonios'  => 'welcome#testimonios'
@@ -13,14 +20,13 @@ Rails.application.routes.draw do
 
   get 'estilistas/inicioest' => 'estilistas#inicioest#perfilest'
   get 'estilistas/perfilest' => 'estilistas#perfilest'
-  get 'estilistas/estilistas/cortesest' => 'estilistas#cortesest'
-  get 'estilistas/estilistas/citaspest' => 'estilistas#citaspest'
-  get 'estilistas/estilistas/agendaest' => 'estilistas#agendaest'
-  get 'estilistas/estilistas/pubexpest' => 'estilistas#pubexpest'
-  get 'estilistas/estilistas/verexpest' => 'estilistas#verexpest'
+  get 'estilistas/cortesest' => 'estilistas#cortesest'
+  get 'estilistas/citaspest' => 'estilistas#citaspest'
+  get 'estilistas/agendaest' => 'estilistas#agendaest'
+  get 'estilistas/pubexpest' => 'estilistas#pubexpest'
+  get 'estilistas/verexpest' => 'estilistas#verexpest'
 
-  post '/entrar' => 'welcome#entrar'
-
+  post '/entrar' => 'clientes#entrar'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

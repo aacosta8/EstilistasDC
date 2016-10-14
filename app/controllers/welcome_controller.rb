@@ -16,6 +16,7 @@ class WelcomeController < ApplicationController
         end
   end
   def registrar
+    render plain: "Clic en registrar"
  #  	#Despues de lo explicado para entrar
  #  	persona = Persona.new
  #  	persona.nombre = nombre;
