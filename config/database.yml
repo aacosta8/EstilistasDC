@@ -7,24 +7,24 @@
 default: &default
   adapter: postgresql
   pool: 5
-  username: alex
-  password: '32205045'
+  username: jossava
+  password: '123'
   host: localhost
   port: 5432
 
 development:
   <<: *default
-  database: estilistasdc
+  database: estilistasdecorazon
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: estilistasdc_test
+  database: estilistasdecorazon_test
 
 production:
   <<: *default
-  database: estilistasdc
+  database: estilistasdecorazon
   
 
