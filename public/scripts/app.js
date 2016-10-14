@@ -9,7 +9,6 @@
  * Main module of the application.
  */
 
- var app = angular.module("estilistasDC", ["ngRoute"]);
  app.config(function($routeProvider) {
   $routeProvider
   .when("/", {
@@ -32,17 +31,17 @@
   })
   .when("/registro", {
     templateUrl : "registro.html"
-  })
-  .when("/inicioest", {
+  });
+  /*.when("/inicioest", {
     templateUrl : "inicioest.html"
   })
-  .when("estilistas/perfilest", {
+  .when("/perfilest", {
     templateUrl : "perfilest.html"
   })
-  .when("estilistas/cortesest", {
+  .when("/cortesest", {
     templateUrl : "cortesest.html"
   })
-  .when("estilistas/agendaest", {
+  .when("/agendaest", {
     templateUrl : "agendaest.html"
   })
   .when("estilistas/citaspest", {
@@ -53,5 +52,5 @@
   })
   .when("estilistas/verexpest", {
     templateUrl : "verexpest.html"
-  });
+  });*/
 });

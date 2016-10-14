@@ -5,14 +5,16 @@ class WelcomeController < ApplicationController
   def main
   end
   def entrar
-  	parametros_seguros = entrar_params
-  	correo = parametros_seguros[:correo]
-        clave = parametros_seguros[:clave]
+  	 parametros_seguros = entrar_params
+  	 correo = parametros_seguros[:correo]
+         clave = parametros_seguros[:clave]
         usuario = Stylist.find_by(correo_electronico: correo)
         if usuario
-        	render plain: "Hola"
-        else
-        	render plain: "No"
+        # redirect_to estilistas_inicioest_path
+        #	render plain: "Hola"
+       else
+        #	render plain: "No"
+          redirect_to estilistas_inicioest_path
         end
   end
   def registrar

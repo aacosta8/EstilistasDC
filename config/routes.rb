@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
   get 'estilistas/inicioest' => 'estilistas#inicioest#perfilest'
   get 'estilistas/perfilest' => 'estilistas#perfilest'
-  get 'estilistas/estilistas/cortesest' => 'estilistas#cortesest'
-  get 'estilistas/estilistas/citaspest' => 'estilistas#citaspest'
-  get 'estilistas/estilistas/agendaest' => 'estilistas#agendaest'
-  get 'estilistas/estilistas/pubexpest' => 'estilistas#pubexpest'
-  get 'estilistas/estilistas/verexpest' => 'estilistas#verexpest'
+  get 'estilistas/cortesest' => 'estilistas#cortesest'
+  get 'estilistas/citaspest' => 'estilistas#citaspest'
+  get 'estilistas/agendaest' => 'estilistas#agendaest'
+  get 'estilistas/pubexpest' => 'estilistas#pubexpest'
+  get 'estilistas/verexpest' => 'estilistas#verexpest'
 
   post '/entrar' => 'welcome#entrar'
 
