@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-
-  root 'clientes#index_clientes'
-  get '/main'  => 'clientes#main'
-  get '/perfil' => 'clientes#perfil'
-  get '/misCitas' => 'clientes#misCitas'
-  get '/puntosCercanos' => 'clientes#puntosCercanos'
-  get '/estilistas' => 'clientes#estilistas'
-  get '/experiencias' => 'clientes#experiencias'
   
   root 'welcome#index'
   get '/main'  => 'welcome#main'
@@ -17,7 +9,13 @@ Rails.application.routes.draw do
   get '/login'  => 'welcome#login'
   get '/registro'  => 'welcome#registro'
 
-
+  get '/entrar'  => 'clientes#index_clientes'
+  get '/mainC'  => 'clientes#mainC'
+  get '/perfil' => 'clientes#perfil'
+  get '/misCitas' => 'clientes#misCitas'
+  get '/puntosCercanos' => 'clientes#puntosCercanos'
+  get '/estilistas' => 'clientes#estilistas'
+  get '/experiencias' => 'clientes#experiencias'
 
   get 'estilistas/inicioest' => 'estilistas#inicioest#perfilest'
   get 'estilistas/perfilest' => 'estilistas#perfilest'

@@ -1,3 +1,96 @@
+<!--style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<div class="main clearfix">
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#/mainC">Inicio</a>
+  <a href="#/perfil">Perfil</a>
+  <a href="#/misCitas">Mis citas</a>
+  <a href="#/puntosCercanos">Puntos cercanos</a>
+  <a href="#/estilistas">Estilistas</a>
+  <a href="#/experiencias">Experiencias</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+</div>
+
+  <div class="container">
+    <div ng-view=""></div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="container">
+    <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
+  </div>
+</div>  
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script-->
+
+
 <style>
   body {margin:0;}
   ul.topnav {
@@ -52,7 +145,7 @@
 <div class="main clearfix">
   <nav> 
     <ul class="topnav" id="myTopnav">
-      <li><a href="#/">Inicio</a></li>
+      <li><a href="#/mainC">Inicio</a></li>
       <li><a href="#/perfil">Perfil</a></li>
       <li><a href="#/misCitas">Mis citas</a></li>
       <li><a href="#/puntosCercanos">Puntos cercanos</a></li>
@@ -66,7 +159,6 @@
 
   <br>
   <br>
-  <!-- Add your site or application content here -->
 
   <div class="container">
     <div ng-view=""></div>

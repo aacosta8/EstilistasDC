@@ -1,8 +1,7 @@
 class ClientesController < ApplicationController
   def index_clientes
-    @Holamundo = "Hola Clientes"
   end
-  def main
+  def mainC
   end
   def perfil
   end

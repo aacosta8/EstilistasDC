@@ -12,7 +12,8 @@ class WelcomeController < ApplicationController
     if usuario
      render plain: "Hola"
    else
-     render plain: "No"
+     redirect_to controller: 'clientes', action: 'index_clientes'
+     #render plain: "No"
    end
  end
  def registrar

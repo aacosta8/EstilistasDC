@@ -54,6 +54,12 @@
   .when("estilistas/verexpest", {
     templateUrl : "verexpest.html"
   })
+  .when("/mainC", {
+    templateUrl : "mainC.html"
+  })
+  .when("/", {
+    templateUrl : "index_clientes.html"
+  })
   .when("/perfil", {
     templateUrl : "perfil.html"
   })
