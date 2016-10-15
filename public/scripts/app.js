@@ -57,7 +57,7 @@
   .when("/mainC", {
     templateUrl : "mainC.html"
   })
-  .when("/", {
+  .when("/entrar", {
     templateUrl : "index_clientes.html"
   })
   .when("/perfil", {
