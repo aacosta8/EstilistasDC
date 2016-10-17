@@ -1,1 +1,62 @@
-<p>Slider aquí</p>
+<!-- Simple Autoplay Slideshow
+-->
+<style>
+	body {
+		text-align: center;
+	}
+
+	#sampletext {
+		position: absolute;
+		font : italic bold 60px arial;
+		color : #aaaaaa;
+		margin-top : 200px;
+	}
+
+
+	#slideshow > div { 
+		position: absolute; 
+		top: 500px; 
+		left: 0px; 
+		right: 0px; 
+		bottom: 0px; 
+	}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<body>
+	<div id="slideshow">
+		<div>
+			<img src="images/slider1.jpg" width="1177" height="700">
+		</div>
+		<div>
+			<img src="images/slider2.jpg" width="1177" height="700">
+		</div>
+		<div>
+			<img src="images/slider3.jpg" width="1177" height="700">
+		</div>
+		<div>
+			<img src="images/slider4.jpg" width="1177" height="700">
+		</div>
+		<div>
+			<img src="images/slider5.jpg" width="1177" height="700">
+		</div>
+		<div>
+			<img src="images/slider6.jpg" width="1177" height="700">
+		</div>
+	</div>
+</body>
+
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+		$('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(2000)
+		.end()
+		.appendTo('#slideshow');
+	},  3000);
+</script>
+

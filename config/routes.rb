@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'welcome#index'
+  root to:'welcome#main'
   get '/main'  => 'welcome#main'
   get '/sobreNosotros'  => 'welcome#sobreNosotros'
   get '/testimonios'  => 'welcome#testimonios'
@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/login'  => 'welcome#login'
   get '/registro'  => 'welcome#registro'
 
-  get '/entrar'  => 'clientes#index_clientes'
   get '/mainC'  => 'clientes#mainC'
   get '/perfil' => 'clientes#perfil'
   get '/misCitas' => 'clientes#misCitas'
@@ -17,13 +16,13 @@ Rails.application.routes.draw do
   get '/estilistas' => 'clientes#estilistas'
   get '/experiencias' => 'clientes#experiencias'
 
-  get 'estilistas/inicioest' => 'estilistas#inicioest#perfilest'
-  get 'estilistas/perfilest' => 'estilistas#perfilest'
-  get 'estilistas/cortesest' => 'estilistas#cortesest'
-  get 'estilistas/citaspest' => 'estilistas#citaspest'
-  get 'estilistas/agendaest' => 'estilistas#agendaest'
-  get 'estilistas/pubexpest' => 'estilistas#pubexpest'
-  get 'estilistas/verexpest' => 'estilistas#verexpest'
+  get '/mainest' => 'estilistas#mainest'
+  get '/perfilest' => 'estilistas#perfilest'
+  get '/cortesest' => 'estilistas#cortesest'
+  get '/citaspest' => 'estilistas#citaspest'
+  get '/agendaest' => 'estilistas#agendaest'
+  get '/pubexpest' => 'estilistas#pubexpest'
+  get '/verexpest' => 'estilistas#verexpest'
 
   post '/entrar' => 'welcome#entrar'
 

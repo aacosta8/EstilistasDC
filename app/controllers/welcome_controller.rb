@@ -1,18 +1,32 @@
 class WelcomeController < ApplicationController
   def index
-  	@Holamundo = "Hola Estilistas"
+  	# @Holamundo = "Hola Estilistas"
   end
   def main
+  end
+  def contact
+  end
+  def login
+  end
+  def noticias
+  end
+  def registro
+  end
+  def sobreNosotros
+  end
+  def testimonios
   end
   def entrar
   	parametros_seguros = entrar_params
   	correo = parametros_seguros[:correo]
     clave = parametros_seguros[:clave]
-    usuario = Stylist.find_by(correo_electronico: correo)
-    if usuario
-     render plain: "Hola"
+    estilista = Stylist.find_by(correo_electronico: correo)
+    # cliente = Customer.find_by(correo_electronico: correo)
+    if estilista
+     # render plain: "Hola"
+     redirect_to controller: 'estilistas', action: 'mainest'
    else
-     redirect_to controller: 'clientes', action: 'index_clientes'
+     redirect_to controller: 'clientes', action: 'mainC'
      #render plain: "No"
    end
  end
