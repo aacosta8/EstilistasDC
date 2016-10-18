@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Hola estilista</title>
+	<title>Estilistas de Corazón</title>
 
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -11,6 +11,21 @@
 
 	<link rel="shortcut icon" href="../corazon.ico"> 
 	<link rel="stylesheet" type="text/css" href="../css/inicioest.css">
+
+	<ul>
+		<li><%=link_to "Inicio", mainest_path%></li>
+		<li><%=link_to "Perfil", perfilest_path%></li>
+		<li><%=link_to "Cortes", cortesest_path%></li>
+		<li><%=link_to "Agenda", agendaest_path%></li>
+		<li><%=link_to "Citas pendientes", citaspest_path%></li>
+		<li class="dropdown">
+			<a class="dropbtn">Experiencias</a>
+			<div class="dropdown-content">
+				<%=link_to "Publicar experiencia", pubexpest_path%>
+				<%=link_to "Ver experiencias", verexpest_path%>
+			</div>
+		</li>
+	</ul>
 
 </head>
 

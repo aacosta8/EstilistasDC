@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <title>Estilistas de Corazón</title>
+
+ <meta name="description" content="">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="author" content="Codrops" />
+ <link rel="shortcut icon" href="../corazon.ico"> 
+ <link rel="stylesheet" type="text/css" href="../css/iniciocli.css">
+
+
+ <div class="main clearfix">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <%=link_to "Inicio", mainC_path%>
+    <%=link_to "Perfil", perfil_path%>
+    <%=link_to "Mis citas", misCitas_path%>
+    <%=link_to "Puntos cercanos", puntosCercanos_path%>
+    <%=link_to "Estilistas", estilistas_path%>
+    <%=link_to "Experiencias", experiencias_path%>
+  </div>
+
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+  </div>
+
+  <div class="container">
+    <div ng-view=""></div>
+  </div>
+
+</div>
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+
+</head>
+
+<body>
+  <%= yield %>
+</body>
+</html>
