@@ -8,8 +8,6 @@ class EstilistasController < ApplicationController
   def cortesest
   end
   def perfilest
-  	redirect_to :back
-  	redirect_to "/perfilest"
   end
   def pubexpest
   end

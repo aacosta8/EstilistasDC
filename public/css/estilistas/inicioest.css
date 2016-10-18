@@ -1,3 +1,13 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  font:12pt Lato, sans-serif;
+  min-height:100%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
