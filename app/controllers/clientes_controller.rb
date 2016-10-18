@@ -1,6 +1,4 @@
 class ClientesController < ApplicationController
-  def index_clientes
-  end
   def mainC
   end
   def perfil
