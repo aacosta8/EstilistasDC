@@ -1,3 +1,4 @@
+
 class WelcomeController < ApplicationController
   def index
   	# @Holamundo = "Hola Estilistas"
@@ -48,3 +49,4 @@ def entrar_params
  params.permit(:correo,:clave)
 end
 end
+

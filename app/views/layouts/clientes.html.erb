@@ -9,23 +9,61 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="author" content="Codrops" />
  <link rel="shortcut icon" href="../corazon.ico"> 
- <link rel="stylesheet" type="text/css" href="../css/clientes/iniciocli.css">
+ <link rel="stylesheet" type="text/css" href="../css/clientes/menu_cliente.css">
 
 
  <div class="main clearfix">
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <%=link_to "Inicio", mainC_path%>
-    <%=link_to "Perfil", perfil_path%>
-    <%=link_to "Mis citas", misCitas_path%>
-    <%=link_to "Puntos cercanos", puntosCercanos_path%>
-    <%=link_to "Estilistas", estilistas_path%>
-    <%=link_to "Experiencias", experiencias_path%>
-    <%=link_to "Salir", main_path%>
-  </div>
-
-  <div id="main">
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+   <div>
+    <ul class="ca-menu">
+      <li>
+        <span class="ca-icon"><img src="images/home.png"></span>
+        <div class="ca-content">
+          <h1 class="ca-main">Inicio</h1>
+          <h3 class="ca-sub">Personalized to your needs</h3>
+        </div>
+        <%=link_to "", mainC_path%>
+      </li>
+      <li>
+        <span class="ca-icon"><img src="images/profile.png"></span>
+        <div class="ca-content">
+          <h1 class="ca-main">Perfil</h1>
+          <h3 class="ca-sub">Advanced use of technology</h3>
+        </div>
+        <%=link_to "", perfil_path%>
+      </li>
+      <li>
+        <span class="ca-icon" id="heart"><img src="images/appoinment.png"></span>
+        <div class="ca-content">
+          <h1 class="ca-main">Mis citas</h1>
+          <h3 class="ca-sub">Understanding visually</h3>
+        </div>
+        <%=link_to "", misCitas_path%>
+      </li>
+      <li>
+        <span class="ca-icon"><img src="images/closepoints.png"></span>
+        <div class="ca-content">
+          <h1 class="ca-main">Puntos cercanos</h1>
+          <h3 class="ca-sub">Professionals in action</h3>
+        </div>
+        <%=link_to "", puntosCercanos_path%>
+      </li>
+      <li>
+        <span class="ca-icon"><img src="images/stylish.png"></span>
+        <div class="ca-content">
+          <h1 class="ca-main">Estilistas</h1>
+          <h3 class="ca-sub">24/7 for you needs</h3>
+        </div>
+        <%=link_to "", estilistas_path%>
+      </li>
+      <li>
+        <span class="ca-icon"><img src="images/experiences.png"></span>
+        <div class="ca-content">
+          <h1 class="ca-main">Experiencias</h1>
+          <h3 class="ca-sub">24/7 for you needs</h3>
+        </div>
+        <%=link_to "", experiencias_path%>
+      </li>
+    </ul>
   </div>
 
   <div class="container">
@@ -41,7 +79,6 @@
     document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
-
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
