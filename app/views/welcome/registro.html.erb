@@ -1,18 +1,21 @@
-<link rel="stylesheet" type="text/css" href="css/forms.css"/>
 
-<div>
-  <form >
-    <label for="iden">Identificación</label>
-    <input type="text" id="iden" name="identificacion">
-
-    <label for="lname">Nombre</label>
-    <input type="text" id="lname" name="lastname">
-
-    <label for="ap">Apellido</label>
-    <input type="text" id="ap" name="apellido">
-     
-    </select>
-     <input type="submit" value="Entrar" class="login-button">
-
-  </form>
+<div align="center">
+	<h1>¿Eres un nuevo cliente o un estilista? </h1>
+	<br><br>
+  <%= link_to "Cliente", regcliente_path, :class => "btn btn-primary btn-lg active"  %>
+  <%= link_to "Estilista", regestilista_path, :class => "btn btn-default btn-lg active" %>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="footer">
+  <div class="container">
+    <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
+  </div>
+</div>
+
+

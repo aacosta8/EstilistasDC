@@ -1,0 +1,54 @@
+<%= form_tag '/regclientes', class: 'login' do %>
+
+
+<form role="form">
+  
+  <div class="form-group">
+    <label for="Nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="Apellido">Apellido</label>
+    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Introduce tu apellido">
+  </div>
+
+  <div class="form-group">
+    <label for="Cedula">Cédula</label>
+    <input type="text" class="form-control" id="cedula" name="cedula" placeholder="Introduce tu número de identificación" required>
+  </div>
+
+  <div class="form-group">
+    <label for="Nacimiento">Fecha de nacimiento</label>
+    <input type="date" class="form-control" id="nacimiento" name="nacimiento" placeholder="Selecciona tu fecha de nacimiento">
+  </div>
+
+  <div class="form-group">
+    <label for="Genero">Género</label>
+    <input type="text" class="form-control" id="genero" name="genero" placeholder="Selecciona tu género">
+  </div>
+
+  <div class="form-group">
+    <label for="Movil">Móvil</label>
+    <input type="text" class="form-control" id="movil" name="movil" placeholder="Introduce tu número de celular">
+  </div>
+
+  <div class="form-group">
+    <label for="Fijo">Fijo</label>
+    <input type="text" class="form-control" id="fijo" name="fijo" placeholder="Introduce tu número fijo">
+  </div>
+
+  <div class="form-group">
+    <label for="Tipo">Tipo de discapacidad</label>
+    <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Introduce tu tipo de discapacidad">
+  </div>
+
+
+
+  <button type="submit" class="btn btn-default">Enviar</button>
+
+
+</form>
+
+
+<% end %>
