@@ -68,12 +68,19 @@
 			<br>
 			<br>
 			<section id="buttons">
-				<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Cancelar">
-				<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Agendar">
+				<input type="reset" onclick="myAlert2()" name="reset" id="resetbtn" class="resetbtn" value="Cancelar">
+				<input type="reset" onclick="myAlert1()" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Agendar">
 				<br style="clear:both;">
 			</section>
 		</form>
 	</section>
-
+	<script>
+		function myAlert1() {
+			swal("Bien", "Su cita se ha guardado con éxito!", "success");
+		}
+		function myAlert2() {
+			swal({   title: "Está seguro?",   text: "Deseas cancelar la cita?",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   closeOnConfirm: false }, function(){   swal("Cancelada", "Su cita ha sido cancelada con éxito.", "success"); });
+		}
+	</script>
 </body>
 </html>
