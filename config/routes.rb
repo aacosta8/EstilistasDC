@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/noticias'  => 'welcome#noticias'
   get '/login'  => 'welcome#login'
   get '/registro'  => 'welcome#registro'
+  get '/regcliente' => 'welcome#regcliente'
+  get '/regestilista' => 'welcome#regestilista'
 
   get '/mainC'  => 'clientes#mainC'
   get '/perfil' => 'clientes#perfil'
@@ -25,6 +27,11 @@ Rails.application.routes.draw do
   get '/verexpest' => 'estilistas#verexpest'
 
   post '/entrar' => 'welcome#entrar'
+
+  post '/registrarme' => 'welcome#registrarme'
+  post '/regclientes' => 'welcome#regclientes'
+  post '/regestilistas' => 'welcome#regestilistas'
+
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
