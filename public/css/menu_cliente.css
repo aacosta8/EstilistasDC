@@ -17,11 +17,11 @@
 .ca-menu li{
     width: 215px;
     height: 215px;
-    border: 10px solid #FE642E;
+    border: 10px solid #191970;
     overflow: hidden;
     position: relative;
     float:left;
-    background: #F6D8CE;
+    background: #fff;
     margin-left:-48px;
     -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -82,8 +82,8 @@
     display: none;
 }
 .ca-menu li:hover{
-    border-color: #FE4000;
-    background: #F5BCA9;
+    border-color: #191970;
+    background: #DCDCDC;
     z-index: 999;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
