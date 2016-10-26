@@ -1,10 +1,11 @@
 <link rel="stylesheet" type="text/css" href="css/welcome/login.css"/>
+<script type="text/javascript" src="scripts/alerts.js"></script>
 <%= form_tag '/entrar', class: 'login' do %>
-  <h1 class="login-title">Ingresar</h1>
-
+<h1 class="login-title">Ingresar</h1>
+<form name="hongkiat" id="hongkiat-form" method="post" action="#">
 	<input type="text" class="login-input" placeholder="Identificación" name="cedula" id="cedula" autofocus />
 	<input type="text" class="login-input" placeholder="Nombre" name="nombre" id="nombre"/>
 	<input type="submit" value="Entrar" class="login-button"/>
-        <p class="login-lost"><a href="/registro">Registrarse</a></p>
-
+	<p class="login-lost"><a href="/registro">Registrarse</a></p>
+</form>
 <% end %>

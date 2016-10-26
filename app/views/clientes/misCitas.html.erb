@@ -4,6 +4,7 @@
 	<link rel="shortcut icon" href="http://static02.hongkiat.com/logo/hkdc/favicon.ico">
 	<link rel="stylesheet" type="text/css" media="all" href="css/clientes/styleForm.css">
 	<link rel="stylesheet" type="text/css" media="all" href="css/clientes/respForm.css">
+	<script type="text/javascript" src="scripts/alerts.js"></script>
 </head>
 
 <body>
@@ -70,17 +71,12 @@
 			<section id="buttons">
 				<input type="button" onclick="myAlert2()" name="reset" id="resetbtn" class="resetbtn" value="Cancelar">
 				<input type="button" onclick="myAlert1()" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Agendar">
-				<br style="clear:both;">
+				<br>
+				<br>
+				<br>
+				<br>
 			</section>
 		</form>
 	</section>
-	<script>
-		function myAlert1() {
-			swal("Bien", "Su cita se ha guardado con éxito!", "success");
-		}
-		function myAlert2() {
-			swal({   title: "Está seguro?",   text: "Deseas cancelar la cita?",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Aceptar",   closeOnConfirm: false }, function(){   swal("Cancelada", "Su cita ha sido cancelada con éxito.", "success"); });
-		}
-	</script>
 </body>
 </html>
