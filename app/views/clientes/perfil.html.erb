@@ -24,12 +24,17 @@
 				<br>
 				<br>
 				<br>
-			<section id="buttons">
-				<input type="submit" name="submit" id="perfilbtn" class="perfilbtn" tabindex="7" value="Actualizar datos">
-				<br style="clear:both;">
-			</section>
-		</form>
-	</section>
+				<section id="buttons">
+					<input type="button" onclick="myAlert()" id="perfilbtn" value="Actualizar datos">
+					<br style="clear:both;">
+				</section>
+			</form>
+		</section>
+		<script>
+			function myAlert() {
+				swal("Bien", "Haz actualizado tus datos", "success");
+			}
+		</script>
 
-</body>
-</html>
+	</body>
+	</html>
