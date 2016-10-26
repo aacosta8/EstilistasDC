@@ -1,18 +1,29 @@
-<link rel="stylesheet" type="text/css" href="css/forms.css"/>
-
-<div>
-  <form >
-    <label for="iden">Identificación</label>
-    <input type="text" id="iden" name="identificacion">
-
-    <label for="lname">Nombre</label>
-    <input type="text" id="lname" name="lastname">
-
-    <label for="ap">Apellido</label>
-    <input type="text" id="ap" name="apellido">
-     
-    </select>
-     <input type="submit" value="Entrar" class="login-button">
-
-  </form>
-</div>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/voz.css">
+  <script type="text/javascript" src="scripts/voz.js"></script>
+  <title>Ejemplo</title>
+</head>
+<body>
+  <section>
+    <div class="example">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" id="input" class="form-control">
+          <span class="input-group-btn">
+            <button class="button" onclick="procesar(0)" id="procesar"></button>
+          </span>
+        </div>
+        <br>
+        <div class="input-group">
+          <input type="text" id="input1" class="form-control">
+          <span class="input-group-btn">
+            <button class="button" onclick="procesar(1)" id="procesar" ></button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
