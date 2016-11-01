@@ -1,5 +1,7 @@
 class EstilistasController < ApplicationController
   def mainest
+    # @estilista = Person.find(params[:id])
+    # @nombre = @estilista.nombre
   end
   def agendaest
   end
@@ -9,6 +11,7 @@ class EstilistasController < ApplicationController
   end
   def perfilest
   end
+
   def pubexpest
   end
   def verexpest

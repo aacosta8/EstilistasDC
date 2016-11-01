@@ -1,10 +1,31 @@
 <link rel="stylesheet" type="text/css" href="css/welcome/login.css"/>
-<%= form_tag '/entrar', class: 'login' do %>
-  <h1 class="login-title">Ingresar</h1>
+<link rel="stylesheet" type="text/css" href="css/buttons.css"/>
+<h1 align="center">¡Ingresa!</h1>
+<h4 align="center">Observa las novedades.</h4>
+<%= form_tag '/entrar', class: 'form-style-9' do %>
+<ul>
+	<label for="Cedula">Identificación</label>
+	<li>
+		<input type="text" id="cedula" name="cedula" class="field-style field-full align-none" placeholder="Identificación" required/>
+	</li>
+	<label for="Nombre">Nombre</label>
+	<li>
+		<input type="text" id="nombre" name="nombre" class="field-style field-full align-none" placeholder="Nombre" />
+	</li>
+	<li>
+	<br>
+	<div align="center"><input type="submit" value="Entrar" class="myButton"/></div>
+	</li>
+	<p align="center"><a href="/registro"><u>Registrarse</u></a></p>
+</ul>
+<% end %>	
+
+
+  <!-- <h1 class="login-title">Ingresar</h1>
 
 	<input type="text" class="login-input" placeholder="Identificación" name="cedula" id="cedula" autofocus />
 	<input type="text" class="login-input" placeholder="Nombre" name="nombre" id="nombre"/>
 	<input type="submit" value="Entrar" class="login-button"/>
-        <p class="login-lost"><a href="/registro">Registrarse</a></p>
+	<p class="login-lost"><a href="/registro"><u>Registrarse</u></a></p> -->
 
-<% end %>
+	

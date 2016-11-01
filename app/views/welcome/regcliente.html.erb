@@ -1,42 +1,47 @@
-<%= form_tag '/regclientes', class: 'login' do %>
+<%= form_tag '/regclientes', class: 'form-style-9' do %>
 
-
-<form role="form">
-  
-  <div class="form-group">
-    <label for="Nombre">Nombre</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="Apellido">Apellido</label>
-    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Introduce tu apellido">
-  </div>
-
-  <div class="form-group">
-    <label for="Cedula">Cédula</label>
-    <input type="text" class="form-control" id="cedula" name="cedula" placeholder="Introduce tu número de identificación" required>
-  </div>
-
-  <div class="form-group">
-    <label for="Nacimiento">Fecha de nacimiento</label>
-    <input type="date" class="form-control" id="nacimiento" name="nacimiento" placeholder="Selecciona tu fecha de nacimiento">
-  </div>
-
-  <div class="form-group">
-    <label for="Genero">Género</label>
-    <input type="text" class="form-control" id="genero" name="genero" placeholder="Selecciona tu género">
-  </div>
-
-  <div class="form-group">
-    <label for="Movil">Móvil</label>
-    <input type="text" class="form-control" id="movil" name="movil" placeholder="Introduce tu número de celular">
-  </div>
-
-  <div class="form-group">
-    <label for="Fijo">Fijo</label>
-    <input type="text" class="form-control" id="fijo" name="fijo" placeholder="Introduce tu número fijo">
-  </div>
+<link rel="stylesheet" type="text/css" href="../css/welcome/contact.css">
+<link rel="stylesheet" type="text/css" href="../css/buttons.css">
+<ul>
+  <label for="Cedula">Cédula</label>
+  <li>
+    <input type="text" id="cedula" name="cedula" class="field-style field-full align-none" placeholder="Introduce tu número de identificación" />
+  </li>
+  <label for="Nombre">Nombre</label>
+  <li>
+    <input type="text" id="nombre" name="nombre" class="field-style field-full align-none" placeholder="Introduce tu nombre" required/>
+  </li>
+  <label for="Apellido">Apellido</label>
+  <li>
+    <input type="text" id="apellido" name="apellido" class="field-style field-full align-none" placeholder="Introduce tu apellido" />
+  </li>
+  <label for="Tipo">Tipo de discapacidad</label>
+  <li>
+    <input type="text" id="tipo" name="tipo" class="field-style field-full align-none" placeholder="Introduce tu tipo de discapacidad" />
+  </li>
+  <label for="Nacimiento">Fecha de nacimiento</label>
+  <li>
+    <input type="date" id="nacimiento" name="nacimiento" class="field-style field-full align-none" placeholder="Selecciona tu fecha de nacimiento" />
+  </li>
+  <label for="Genero">Género</label>
+  <li>
+    <input type="text" id="genero" name="genero" class="field-style field-full align-none" placeholder="Selecciona tu género" />
+  </li>
+  <label for="Móvil">Teléfono móvil</label>
+  <li>
+    <input type="text" id="movil" name="movil" class="field-style field-full align-none" placeholder="Introduce tu número de celular" />
+  </li>
+  <label for="Fijo">Teléfono fijo</label>
+  <li>
+    <input type="text" id="fijo" name="fijo" class="field-style field-full align-none" placeholder="Introduce tu número fijo" />
+  </li>
+  <li>
+    <br>
+    <div align="center"><button type="submit" class="myButton">Enviar</button></div>
+  </li>
+</ul>
+<% end %>
+<!-- <form role="form">
 
   <div class="form-group">
     <label for="Tipo">Tipo de discapacidad</label>
@@ -46,7 +51,5 @@
   <button type="submit" class="btn btn-default">Enviar</button>
 
 
-</form>
+</form> -->
 
-
-<% end %>
