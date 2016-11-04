@@ -1,79 +1,24 @@
-<!doctype html>
-<head>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="http://static02.hongkiat.com/logo/hkdc/favicon.ico">
-	<link rel="stylesheet" type="text/css" media="all" href="css/clientes/styleForm.css">
-	<link rel="stylesheet" type="text/css" media="all" href="css/clientes/respForm.css">
-</head>
-
-<body>
-
-	<section id="container">
-		<h2>Mis Citas</h2>
-		<form name="hongkiat" id="hongkiat-form" method="post" action="#">
-			<div id="wrapping" class="clearfix" align="center">
-				<section id="aligned">
-					<input type="text" name="name" id="name" placeholder="Fecha" autocomplete="off" tabindex="1" class="txtinput">
-
-					<input type="text" name="name" id="name" placeholder="Horario" autocomplete="off" tabindex="1" class="txtinput">
-
-					<input type="text" name="name" id="name" placeholder="Barbería" autocomplete="off" tabindex="1" class="txtinput">
-
-					<input type="text" name="name" id="name" placeholder="Estilista" autocomplete="off" tabindex="1" class="txtinput">
-
-					<input type="text" name="name" id="name" placeholder="Lugar" autocomplete="off" tabindex="1" class="txtinput">
-				</section>
-				<br>
-				<br>
-				<br>
-				<table>
-					<tr>
-						<th>Fecha</th>
-						<th>Horario</th>
-						<th>Barbería</th>
-						<th>Estilista</th>
-						<th>Lugar</th>
-					</tr>
-					<tr>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-					</tr>					
-				</table>
-			</div>
-			<br>
-			<br>
-			<br>
-			<section id="buttons">
-				<input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Cancelar">
-				<input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Agendar">
-				<br style="clear:both;">
-			</section>
-		</form>
-	</section>
-
-</body>
-</html>
+<!-- <link rel="shortcut icon" href="http://static02.hongkiat.com/logo/hkdc/favicon.ico">
+<link rel="stylesheet" type="text/css" media="all" href="css/clientes/styleForm.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/clientes/respForm.css"> -->
+<link rel="stylesheet" type="text/css" href="../css/clientes/misCitas.css">
+<link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
+<br>
+<h1 align="center">Pedir cita</h1>
+<div align="center"></div>
+<form class="form-style-9">
+<ul>
+<label for="fecha">Fecha</label>
+<li>
+    <input type="date" name="field1" class="field-style field-split align-full" placeholder="Fecha" />
+</li>
+<label for="hora">Hora</label>
+<li>
+	<input type="text" name="field2" class="field-style field-split align-full" placeholder="Hora" />
+</li>
+<li>
+<br>
+<div align="center"><input type="submit" value="Buscar" class="myButton"/></div>
+</li>
+</ul>
+</form>
