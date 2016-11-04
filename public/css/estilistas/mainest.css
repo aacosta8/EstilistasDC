@@ -6,7 +6,6 @@
 }
 
 html {
-  background-image:url("../../../images/background.jpg");
   font:12pt Lato, sans-serif;
   min-height:100%;
 }
@@ -17,10 +16,6 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-}
-
-h1{
-  color: white;
 }
 
 .notifications {
