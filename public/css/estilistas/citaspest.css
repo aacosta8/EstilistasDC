@@ -1,6 +1,5 @@
   body {
-    background: #fafafa url(http://jackrugile.com/images/misc/noise-diagonal.png);
-    color: #444;
+    /*color: #444;*/
     
   }
 
@@ -24,7 +23,7 @@
   } 
 
   th {
-    background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+    background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#216288, #216288);
     border-left: 1px solid #555;
     border-right: 1px solid #777;
     border-top: 1px solid #555;

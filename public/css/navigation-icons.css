@@ -1,5 +1,12 @@
+html{
+  background-image:url("../../../images/grey.jpg");
+}
+
+body {
+    font-family: Lato, sans-serif;
+}
+
 .menu-navigation-icons {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size:0;
 }
@@ -8,14 +15,14 @@
     display: inline-block;
     color: #ffffff;
     background-color: #232526;
-    font-size: 80px;
+    font-size: 45px;
     font-weight: bold;
     box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    width: 28vh;
-    height: 190px;
+    width: 22vh;
+    height: 100px;
 }
 
 .menu-navigation-icons a:hover{
@@ -29,7 +36,7 @@
 
 .menu-navigation-icons a span {
     display: block;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     line-height: 0;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
