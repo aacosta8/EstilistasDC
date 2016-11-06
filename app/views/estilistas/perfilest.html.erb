@@ -1,74 +1,29 @@
-<style>
-	.editar-button {
-		width: 100%;
-		height: 50px;
-		padding: 0;
-		font-size: 20px;
-		color: #fff;
-		text-align: center;
-		background: #f0776c;
-		border: 0;
-		border-radius: 5px;
-		cursor: pointer; 
-		outline:0;
-	}
-</style>
-<link rel="stylesheet" type="text/css" href="../css/estilistas/perfilest.css">
-<form onSubmit="return false">
-	<div class="col-2">
-		<label>
-			Nombre
-			<input placeholder="Nombre" id="name" name="name" tabindex="1">
-		</label>
-	</div>
-	<div class="col-2">
-		<label>
-			Empresa
-			<input placeholder="Empresa" id="company" name="company" tabindex="2">
-		</label>
-	</div>
+<link rel="stylesheet" type="text/css" href="../css/welcome/contact.css">
+<link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
+<h1 align="center">¡Únete!</h1>
+<h4 align="center">Si quieres ser un Estilista de Corazón envía tus datos.</h4>
+<form class="form-style-9">
+<ul>
+<li>
+    <input type="text" name="field1" class="field-style field-split align-left" placeholder="Nombre" />
+    <input type="email" name="field2" class="field-style field-split align-right" placeholder="Celular" />
 
-	<div class="col-3">
-		<label>
-			Dirección
-			<input placeholder="Dirección" id="phone" name="phone" tabindex="3">
-		</label>
-	</div>
-	<div class="col-3">
-		<label>
-			Teléfono fijo
-			<input placeholder="Teléfono fijo" id="email" name="email" tabindex="4">
-		</label>
-	</div>
-	<div class="col-3">
-		<label>
-			Teléfono móvil
-			<input placeholder="Teléfono móvil" id="email" name="email" tabindex="4">
-		</label>
-	</div>
-	<div class="col-2">
-		<label>
-			Correo electrónico
-			<input placeholder="Correo electrónico" id="skills" name="skills" tabindex="6">
-		</label>
-	</div>
-	<div class="col-2">
-		<label>
-			Especialidad
-			<input placeholder="Especialidad" id="skills" name="skills" tabindex="6">
-		</label>
-	</div>
-<!-- 	<div class="col-4">
-		<label>
-			Yrs Experience
-			<input placeholder="How many years of experience?" id="experience" name="experience" tabindex="7">
-		</label>
-	</div>
-	<div class="col-4">
-		<label>Contact References?</label>
-		<center style="position:relative; margin-bottom:8px;"><input type="checkbox" class="js-switch"></center>
-	</div> -->
-	<div class="col-submit">
-		<button class="editar-button">Editar</button>
-	</form>
+</li>
+<li>
+    <input type="text" name="field3" class="field-style field-split align-left" placeholder="Correo electrónico" />
+    <input type="url" name="field4" class="field-style field-split align-right" placeholder="Sitio web" />
+</li>
+<li>
+<input type="text" name="field3" class="field-style field-full align-none" placeholder="Asunto" />
+</li>
+<li>
+<textarea name="field5" class="field-style" placeholder="Mensaje"></textarea>
+</li>
+<li>
+<div align="center"><input type="submit" value="Enviar" class="myButton"/></div>
+</li>
+</ul>
+</form>
+ 
+
 

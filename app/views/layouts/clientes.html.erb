@@ -8,82 +8,37 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="author" content="Codrops" />
  <link rel="shortcut icon" href="../corazon.ico"> 
- <link rel="stylesheet" type="text/css" href="../css/menu_cliente.css">
  <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
  <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+ <link rel="stylesheet" href="css/demo.css">
+ <link rel="stylesheet" href="css/navigation-icons.css">
+ <link rel="stylesheet" href="css/slicknav/slicknav.min.css">
 
- <div class="main clearfix">
-   <div>
-    <ul class="ca-menu">
-      <li>
-        <span class="ca-icon"><img src="images/home.png"></span>
-        <div class="ca-content">
-          <h1 class="ca-main">Inicio</h1>
-          <h3 class="ca-sub">Personalized to your needs</h3>
-        </div>
-        <%=link_to "", mainC_path%>
-      </li>
-      <li>
-        <span class="ca-icon"><img src="images/profile.png"></span>
-        <div class="ca-content">
-          <h1 class="ca-main">Perfil</h1>
-          <h3 class="ca-sub">Advanced use of technology</h3>
-        </div>
-        <%=link_to "", perfil_path%>
-      </li>
-      <li>
-        <span class="ca-icon" id="heart"><img src="images/appoinment.png"></span>
-        <div class="ca-content">
-          <h1 class="ca-main">Mis citas</h1>
-          <h3 class="ca-sub">Understanding visually</h3>
-        </div>
-        <%=link_to "", misCitas_path%>
-      </li>
-      <li>
-        <span class="ca-icon"><img src="images/closepoints.png"></span>
-        <div class="ca-content">
-          <h1 class="ca-main">Puntos cercanos</h1>
-          <h3 class="ca-sub">Professionals in action</h3>
-        </div>
-        <%=link_to "", puntosCercanos_path%>
-      </li>
-      <li>
-        <span class="ca-icon"><img src="images/stylish.png"></span>
-        <div class="ca-content">
-          <h1 class="ca-main">Estilistas</h1>
-          <h3 class="ca-sub">24/7 for you needs</h3>
-        </div>
-        <%=link_to "", estilistas_path%>
-      </li>
-      <li>
-        <span class="ca-icon"><img src="images/experiences.png"></span>
-        <div class="ca-content">
-          <h1 class="ca-main">Experiencias</h1>
-          <h3 class="ca-sub">24/7 for you needs</h3>
-        </div>
-        <%=link_to "", experiencias_path%>
-      </li>
-    </ul>
-  </div>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-  <div class="container">
-    <div ng-view=""></div>
-  </div>
+</head>
 
-</div>
+<body>
 
-<script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-  }
-</script>
+  <nav class="menu-navigation-icons">
+    <a href="/mainC" class="menu-magenta"><i class="fa fa-home"></i><span>Inicio</span>
+    <a href="/perfil" class="menu-blue"><i class="fa fa-user"></i><span>Perfil</span></a>
+    <a href="/misCitas" class="menu-green"><i class="fa fa-calendar"></i><span>Mis citas</span></a>
+    <a href="/puntosCercanos" class="menu-yellow"><i class="fa fa-location-arrow"></i><span>Ubicación</span></a>
+    <a href="/estilistas" class="menu-blue"><i class="fa fa-users"></i><span>Estilistas</span></a>
+    <a href="/experiencias" class="menu-green"><i class="fa fa-comment"></i><span>Experiencias</span></a>
+    <a href="/main" class="menu-red"><i class="fa fa-remove"></i><span>Salir</span></a>
+  </nav>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="scripts/jquery.slicknav.min.js"></script>
+
+  <script>
+    $(function(){
+      $('.menu-navigation-icons').slicknav();
+    });
+  </script>
+
 
 </head>
 
