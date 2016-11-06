@@ -6,7 +6,6 @@
 }
 
 html {
-  background-image:url("../../../images/background.jpg");
   font:12pt Lato, sans-serif;
   min-height:100%;
 }
@@ -19,14 +18,10 @@ ul {
     background-color: #333;
 }
 
-h1{
-  color: white;
-}
-
 .notifications {
   display:block;
   position:relative;
-  margin:100px auto;
+  margin:30px auto;
   width:80px;
   height:80px;
   background-color:white;

@@ -80,11 +80,11 @@ a, li {
 	display: block;
 	color: rgba(249, 249, 249, .9);
 	text-decoration: none;
-	-webkit-transition: color 1s, background 1s, height 1s;
-	-moz-transition: color 1s, background 1s, height 1s;
-	-o-transition: color 1s, background 1s, height 1s;
-	-ms-transition: color 1s, background 1s, height 1s;
-	transition: color .1s, background 1s, height 1s;
+	-webkit-transition: color .5s, background .5s, height .5s;
+	-moz-transition: color .5s, background .5s, height .5s;
+	-o-transition: color .5s, background .5s, height .5s;
+	-ms-transition: color .5s, background .5s, height .5s;
+	transition: color .5s, background .5s, height .5s;
 }
 
 .nav i{
@@ -146,11 +146,11 @@ a, button {
 		float: left;
 		width: 16.66666666666667%;
 		text-align: center;
-		-webkit-transition: border 1s;
-		-moz-transition: border 1s;
-		-o-transition: border 1s;
-		-ms-transition: border 1s;
-		transition: border 1s;
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
 	}
 
 	.nav a {
@@ -203,11 +203,11 @@ a, button {
 
 	.icon + span {
 		margin-top: 2.1em;
-		-webkit-transition: margin 1s;
-		-moz-transition: margin 1s;
-		-o-transition: margin 1s;
-		-ms-transition: margin 1s;
-		transition: margin 1s;
+		-webkit-transition: margin .5s;
+		-moz-transition: margin .5s;
+		-o-transition: margin .5s;
+		-ms-transition: margin .5s;
+		transition: margin .5s;
 	}
 
 	/* Animating the height of the element*/

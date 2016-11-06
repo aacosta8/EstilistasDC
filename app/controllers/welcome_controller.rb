@@ -39,6 +39,7 @@ class WelcomeController < ApplicationController
 
      if persona.tipo == "Estilista" and persona.nombre == nombre
        redirect_to controller: 'estilistas', action: 'mainest'
+       # redirect_to mainest_path(:id => persona.id)
      end
    else
     flash[:notice] = "Campos vacíos"

@@ -1,5 +1,5 @@
 .form-style-9{
-    max-width: 360px;
+    width: 300px;
     background: #FAFAFA;
     padding: 30px;
     margin: 50px auto;
@@ -34,7 +34,7 @@
         border:1px solid #B0CFE0;
     }
     .form-style-9 ul li .field-split{
-        width: 49%;
+        width: 30%;
     }
     .form-style-9 ul li .field-full{
         width: 100%;
@@ -45,27 +45,3 @@
     .form-style-9 ul li input.align-right{
         float:right;
     }
-    .form-style-9 ul li textarea{
-        width: 100%;
-        height: 100px;
-    }
-/*    .form-style-9 ul li input[type="button"], 
-    .form-style-9 ul li input[type="submit"] {
-        align-self: center;
-        -moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
-        -webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
-        box-shadow: inset 0px 1px 0px 0px #3985B1;
-        background-color: #216288;
-        border: 1px solid #17445E;
-        display: inline-block;
-        cursor: pointer;
-        color: #FFFFFF;
-        padding: 8px 18px;
-        text-decoration: none;
-        font: 12px Arial, Helvetica, sans-serif;
-    }
-    .form-style-9 ul li input[type="button"]:hover, 
-    .form-style-9 ul li input[type="submit"]:hover {
-        background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
-        background-color: #28739E;
-    }*/
