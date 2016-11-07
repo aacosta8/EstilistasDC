@@ -36,9 +36,25 @@ if (!('webkitSpeechRecognition' in window)) {
 
   function procesar(idp) {
     if (idp==0) {
-      id="input";
-    }else{
-      id="input1";
+      id="inputContacto0";
+    }else if(idp==1){
+      id="inputContacto1";
+    }else if(idp==2){
+      id="inputContacto2";
+    }else if(idp==3){
+      id="inputContacto3";
+    }else if(idp==4){
+      id="inputContacto4";
+    }else if(idp==5){
+      id="inputContacto5";
+    }else if(idp==6){
+      id="inputContacto6";
+    }else if(idp==7){
+      id="inputContacto7";
+    }else if(idp==8){
+      id="inputContacto8";
+    }else if(idp==9){
+      id="inputContacto9";
     }
     if (recognizing == false) {
       recognition.start();
