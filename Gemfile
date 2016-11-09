@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 0.18.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'sweetalert-rails'
+gem 'sweet-alert-confirm'
+# gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
 
 #For Heroku config
 gem 'rails_12factor', group: :production  

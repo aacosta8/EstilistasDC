@@ -1,34 +1,14 @@
 <link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
 <br>
-<h1 align="center">Ubicación</h1>
+<h1 align="center">Puntos cercanos</h1>
 <div id="map" style="width:100%;height:500px"></div>
 <div align="center">
 	<br>
-	<div align="center"><input type="submit" value="Buscar" class="myButton"/></div>
-		<br style="clear:both;">
-	</section>
+	<!--div align="center"><input type="submit" value="Buscar" class="myButton"/></div>
+	<br style="clear:both;">
+</section-->
 </div>
-<style>
-	html, body {
-		margin: 0;
-		padding: 0;
-	}
-	#map {
-		height: 100%;
-	}
-</style>
-
 <div id="map"></div>
-<script>
-
-	var map;
-	function initMap() {
-		map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: -34.397, lng: 150.644},
-			zoom: 8
-		});
-	}
-
-</script>
+<script src="scripts/mapa.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5EQtTVHEOOv3p0q6Qado3kBCjryAs5bY&callback=initMap"
 async defer></script>
