@@ -1,33 +1,29 @@
-<link rel="stylesheet" type="text/css" href="../css/clientes/misCitas.css">
+<link rel="stylesheet" type="text/css" href="../css/estilistas/agendaest.css">
 <link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
 <br>
 <h1 align="center">Agenda</h1>
-<form class="form-style-9">
+<%= form_tag '/agendaest/guardar', class: 'form-style-9' do %>
 <ul>
-<label for="desde">Desde</label>
+<label for="fecha">Fecha</label>
 <li>
-    <input type="date" name="field1" class="field-style field-split align-full" placeholder="Desde" />
-</li>
-<label for="hasta">Hasta</label>
-<li>
-	<input type="date" name="field2" class="field-style field-split align-full" placeholder="Hasta" />
+    <input type="date" name="fecha" class="field-style field-split align-full" placeholder="Fecha" />
 </li>
 <label for="horain">Hora inicio</label>
 <li>
-  <input type="time" name="field2" class="field-style field-split align-full" placeholder="Hora inicio" />
+  <input type="time" name="horain" class="field-style field-split align-full" placeholder="Hora inicio" />
 </li>
 <label for="horafin">Hora fin</label>
 <li>
-  <input type="time" name="field2" class="field-style field-split align-full" placeholder="Hora fin" />
+  <input type="time" name="horafin" class="field-style field-split align-full" placeholder="Hora fin" />
 </li>
 <label for="hasta">Lapso</label>
 <li>
-	<select class="field-style field-split align-full">
-  	<option value="20">20 minutos</option>
-  	<option value="30">30 minutos</option>
-  	<option value="40">40 minutos</option>
-  	<option value="50">50 minutos</option>
-  	<option value="60">1 hora</option>
+	<select class="field-style field-split align-full" name="lapso">
+  	<option value="00:20">20 minutos</option>
+  	<option value="00:30">30 minutos</option>
+  	<option value="00:40">40 minutos</option>
+  	<option value="00:50">50 minutos</option>
+  	<option value="01:00">1 hora</option>
 	</select>
 	<!-- <input type="text" name="field2" class="field-style field-split align-full" placeholder="Lapso" /> -->
 </li>
@@ -36,6 +32,6 @@
 <div align="center"><input type="submit" value="Generar" class="myButton"/></div>
 </li>
 </ul>
-</form>
+<% end %> 
 
 

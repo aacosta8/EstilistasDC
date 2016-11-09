@@ -5,9 +5,9 @@
 	font-family: Lato, sans-serif;
 	src:url('../fonts/codropsicons/codropsicons.eot');
 	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+	url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+	url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,10 +25,15 @@ body {
 	background: #f9f9f9;
 }
 
+h1{
+	top: 65px;
+}
+.imagen { position:absolute; top: 25px; left: 830px; z-index: 1; } 
+
 .titulo{
-      position:absolute;
-      bottom: 450px;
-      left: 440px;
+	position:absolute;
+	bottom: 450px;
+	left: 440px;
 }
 
 a {
@@ -49,7 +54,7 @@ a:hover {
 
 .main {
 	max-width: 82.667em;
-	min-height: 40em;
+	/*min-height: 40em;*/
 }
 
 .container > header {

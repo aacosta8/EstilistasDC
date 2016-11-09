@@ -13,6 +13,7 @@ module EstilistasDeCorazon
     # -- all .rb files in that directory are automatically loaded.
 
     config.assets.paths << Rails.root.join('app', 'assets', 'bower_components')
-
+    config.time_zone = 'Bogota'
+    config.active_record.default_timezone = :local
   end
 end

@@ -1,3 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Estilistas de Corazón</title>
+  <meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+  <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+  <meta name="author" content="Codrops" />
+  <link rel="shortcut icon" href="../logo.ico">
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <script src="scripts/modernizr.custom.js"></script> --> 
+
+<!--   <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Codrops" />
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="author" content="Codrops" />
+  <link rel="shortcut icon" href="../logo.ico"> 
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <script src="scripts/modernizr.custom.js"></script> -->
+
+     <!--  <a href="/main"><img class="imagen" src="images/logo.PNG" width="130" height="125" align="right"></a> -->
+    <!--  <div class="container">
+      <header>
+        <h1 align="center">Estilistas de Corazón</h1>  
+      </header>
+
+    <div class="main clearfix">
+      <nav id="menu" class="nav">         
+        <ul>
+          <li>
+            <a href="/main">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-home"></i>
+              </span>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="/sobreNosotros">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-team"></i>
+              </span>
+              <span>Sobre nosotros</span>
+            </a>
+          </li>
+          <li>
+            <a href="/testimonios">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-blog"></i>
+              </span>
+              <span>Testimonios</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-contact"></i>
+              </span>
+              <span>Contacto</span>
+            </a>
+          </li>
+          <li>
+            <a href="/noticias">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-services"></i>
+              </span>
+              <span>Noticias</span>
+            </a>
+          </li>
+          <li>
+           <a href="/login">
+             <span class="icon">
+              <i aria-hidden="true" class="icon-team"></i>
+            </span>
+            <span>Iniciar sesión</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+</head>
+<script>
+      //  The function to change the class
+      var changeClass = function (r,className1,className2) {
+        var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+        if( regex.test(r.className) ) {
+          r.className = r.className.replace(regex,' '+className2+' ');
+        }
+        else{
+          r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+        }
+        return r.className;
+      };  
+
+      //  Creating our button in JS for smaller screens
+      var menuElements = document.getElementById('menu');
+      menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+      //  Toggle the class on click to show / hide the menu
+      document.getElementById('menutoggle').onclick = function() {
+        changeClass(this, 'navtoogle active', 'navtoogle');
+      }
+
+      // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+      document.onclick = function(e) {
+        var mobileButton = document.getElementById('menutoggle'),
+        buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+        if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+          changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+        }
+      }
+    </script>
+    <br><br>
+
+    <body>
+
+    <%= yield %>
+
+<!--   <div class="footer">
+  <div class="container">
+    <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
+  </div>
+</div> -->
+<!-- </body>
+
+
+</html> -->
 <!DOCTYPE html>
 <html>
 <head>

@@ -5,3 +5,52 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Stylist.destroy_all
+Customer.destroy_all
+Person.destroy_all
+Ubication.destroy_all
+
+ubicacion = Ubication.create([{
+	barrio: "default",
+	direccion: "default"
+	}])
+
+
+personas = Person.create([{
+	cedula: "567",
+	nombre: "Valentina",
+	apellido: "Betancur",
+	fecha_nacimiento: "13-1-1997",
+	genero: true,
+	telefono_movil: "12312",
+	telefono_fijo: "54343",
+	ubication_id: "1",
+	tipo: "Cliente"
+	},
+	{
+
+	cedula: "123",
+	nombre: "Andrés",
+	apellido: "Ortiz",
+	fecha_nacimiento: "13-1-1995",
+	genero: false,
+	telefono_movil: "12312",
+	telefono_fijo: "54343",
+	ubication_id: "1",
+	tipo: "Estilista"	
+
+		}])
+
+estilista = Stylist.create([{
+	person_id: Person.second.id,
+	especialidad: "Manicure",
+	correo_electronico: "a@hotmail.com"
+	}])
+
+cliente = Customer.create([{
+	person_id: Person.first.id,
+	tipo_discapacidad: "Visual"
+	}])
+
+p "Created #{Person.count} people"
