@@ -55,6 +55,32 @@ if (!('webkitSpeechRecognition' in window)) {
       id="inputContacto8";
     }else if(idp==9){
       id="inputContacto9";
+    }else if(idp==10){
+      id="inputPerfilCliente10";
+    }else if(idp==11){
+      id="inputPerfilCliente11";
+    }else if(idp==12){
+      id="inputPerfilCliente12";
+    }else if(idp==13){
+      id="inputPerfilCliente13";
+    }else if(idp==14){
+      id="inputPerfilCliente14";
+    }else if(idp==15){
+      id="inputPerfilCliente15";
+    }else if(idp==16){
+      id="inputPerfilCliente16";
+    }else if(idp==17){
+      id="inputContacto17";
+    }else if(idp==18){
+      id="inputContacto18";
+    }else if(idp==19){
+      id="inputContacto19";
+    }else if(idp==20){
+      id="inputContacto20";
+    }else if(idp==21){
+      id="inputContacto21";
+    }else if(idp==22){
+      id="inputContacto22";
     }
     if (recognizing == false) {
       recognition.start();
