@@ -1,28 +1,63 @@
-<link rel="stylesheet" type="text/css" href="../css/welcome/contact.css">
-<link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
+<style>
+	.container{
+		width: 70%;
+		text-align: left;
+	}
+	.alinear{
+		text-align:center;
+		margin:auto;
+	}
+</style>
 <br>
 <h1 align="center">Perfil</h1>
-<div align="center"><img src="images/estilista3.jpg" width="150" height="145"></div>
-<form class="form-style-9">
-<ul>
-<li>
-    <input type="text" name="field1" class="field-style field-split align-left" placeholder="Nombre" />
-    <input type="text" name="field2" class="field-style field-split align-right" placeholder="Apellido" />
+<div align="center"><img src="images/estilista3.jpg" width="150" height="145"></div><br>
+<div align="center">
+	<div class="container">
+		<%= form_tag '/perfilest/editar' do %>
+			<div class="form-group row">
+				<label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduce tu nombre" value="<%= @nombre%>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="apellido" id="apellido" placeholder="Introduce tu apellido" value="<%= @apellido%>"> 
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="fecha_nacimiento" class="col-sm-2 col-form-label">Cumpleaños</label>
+				<div class="col-sm-10">
+					<input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Introduce tu fecha de nacimiento" value="<%= @fecha_nacimiento%>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="telefono_fijo" class="col-sm-2 col-form-label">Teléfono fijo</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="telefono_fijo" id="telefono_fijo" placeholder="Introduc tu teléfono fijo" value="<%= @telefono_fijo%>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="telefono_movil" class="col-sm-2 col-form-label">Teléfono móvil</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="telefono_movil" id="telefono_movil" placeholder="Introduce tu teléfono móvil" value="<%= @telefono_movil%>">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="correo_electronico" class="col-sm-2 col-form-label">Correo electrónico</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" name="correo_electronico" id="correo_electronico" placeholder="Introduce tu correo electrónico" value="<%= @correo_electronico%>">
+				</div><br>
+			</div>
 
-</li>
-<li>
-    <input type="text" name="field3" class="field-style field-split align-left" placeholder="Fecha de nacimiento" />
-    <input type="text" name="field4" class="field-style field-split align-right" placeholder="Teléfono fijo" />
-</li>
-<li>
-    <input type="text" name="field3" class="field-style field-split align-left" placeholder="Teléfono móvil" />
-    <input type="email" name="field4" class="field-style field-split align-right" placeholder="Correo electrónico" />
-</li>
-<li>
-<br>
-<div align="center"><input type="submit" value="Editar" class="myButton"/></div>
-</li>
-</ul>
-</form>
+				<div class="form-group row">
+					<div class="offset-sm-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Editar</button>
+					</div>
+				</div>
+		<% end %>
+	</div>
+</div>
 
 

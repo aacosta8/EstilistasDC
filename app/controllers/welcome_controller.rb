@@ -5,6 +5,9 @@ class WelcomeController < ApplicationController
   end
 
   def main
+
+  session.delete(:persona_id)
+
   end
 
   def contact
@@ -32,6 +35,7 @@ class WelcomeController < ApplicationController
     nombre = parametros_seguros[:nombre]
 
     if persona = Person.find_by(cedula: cedula)
+      session[:persona_id] = persona.id
 
       if persona.tipo == "Cliente" and persona.nombre == nombre
        redirect_to controller: 'clientes', action: 'mainC'
@@ -97,6 +101,7 @@ def regestilistas
 
   estilista.save
 end
+
 
 private
 

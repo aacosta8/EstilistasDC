@@ -13,16 +13,24 @@ Rails.application.routes.draw do
 
   get '/mainC'  => 'clientes#mainC'
   get '/perfil' => 'clientes#perfil'
+  post '/perfil/editar' => 'clientes#editarcliente'
+
   get '/misCitas' => 'clientes#misCitas'
+  get '/listaCitas' => 'clientes#listaCitas'
   get '/puntosCercanos' => 'clientes#puntosCercanos'
   get '/estilistas' => 'clientes#estilistas'
   get '/experiencias' => 'clientes#experiencias'
 
   get '/mainest' => 'estilistas#mainest'
   get '/perfilest' => 'estilistas#perfilest'
+  post '/perfilest/editar' => 'estilistas#editarestilista'
+
   get '/cortesest' => 'estilistas#cortesest'
   get '/citaspest' => 'estilistas#citaspest'
+
   get '/agendaest' => 'estilistas#agendaest'
+  post '/agendaest/guardar' => 'estilistas#agendaestnew'
+
   get '/pubexpest' => 'estilistas#pubexpest'
   get '/verexpest' => 'estilistas#verexpest'
 
