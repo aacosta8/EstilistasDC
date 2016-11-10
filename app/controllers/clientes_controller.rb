@@ -41,12 +41,12 @@ class ClientesController < ApplicationController
     persona = Person.find_by(id: id_cliente)
     persona.nombre = datos[:nombre]
     persona.apellido = datos[:apellido]
-    persona.fecha_nacimiento = datos[:nacimiento]
-    persona.telefono_movil = datos[:movil]
-    persona.telefono_fijo = datos[:fijo]
+    persona.fecha_nacimiento = datos[:fecha_nacimiento]
+    persona.telefono_movil = datos[:telefono_movil]
+    persona.telefono_fijo = datos[:telefono_fijo]
 
     cliente = Customer.find_by(person_id: id_cliente)
-    cliente.tipo_discapacidad = datos[:tipo]
+    cliente.tipo_discapacidad = datos[:tipo_discapacidad]
 
     ubicacion = Ubication.find_by(id: persona.id)
     ubicacion.direccion = datos[:direccion]
@@ -83,6 +83,6 @@ class ClientesController < ApplicationController
   private
 
   def updatecliente_params
-    params.permit(:nombre, :apellido, :nacimiento, :movil, :fijo, :tipo, :direccion, :barrio)
+    params.permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :tipo_discapacidad, :direccion, :barrio)
   end
 end
