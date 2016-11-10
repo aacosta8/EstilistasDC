@@ -1,158 +1,211 @@
-<link rel="stylesheet" type="text/css" href="css/clientes/clientes_estilistas.css">
-<br>
-<h1 align="center">Estilistas</h1>
-<div class="img"><a target="_blank"><img src="images/estilista3.jpg"></a>
-	<div class="information">
-		<br>
-		<b>Nombre:</b>
-		Andrés Betancur
-		<br>
-		<br>
-		<b>Edad:</b>
-		22 años
-		<br>
-		<br>
-		<b>Teléfono:</b>
-		273-83-85
-		<br>
-		<br>
-		<b>Trabaja en:</b>
-		Barber Shop
-		<br>
-		<br>
-		<b>Calificación:</b>
-		★★☆☆☆
-		<br>
-		<br>
-		<a href="">Experiencias pasadas</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div><a href="">Ver más</a></div>
-	</div>
-	<div class="listacortes"><b>Cortes:</b></div>
-	<div class="listacortes">
-		<div><img src="images/corte1.jpg"></div>
-		<div><img src="images/corte2.jpg"></div>
-	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+  .alinear{
+    text-align:center;
+    margin:auto;
+  }
+  .row{
+    width: 100%;
+  }
+  img{
+    width: 45%;
+    height: 25%;
+  }
+  .imagen2{
+    width: 40%;
+    height: 25%;
+  }
+  .boton{
+    width: 70%;
+    padding-left: 13%;
+  }
+  .contenido{
+    width: 70%;
+  }
+  .imgmodal{
+    width: 30%;
+  }
+</style>
+<br><h1 align="center">Estilistas</h1><br>
+
+<div align="center">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div><a target="_blank"><img src="images/estilista3.jpg"></a></div>
+        <br>
+        <b>Nombre:</b>
+        Andrés Betancur
+        <br>
+        <br>
+        <b>Edad:</b>
+        22 años
+        <br>
+        <br>
+        <b>Teléfono:</b>
+        273-83-85
+        <br>
+        <br>
+        <b>Trabaja en:</b>
+        Barber Shop
+        <br>
+        <br>
+        <b>Calificación:</b>
+        ★★☆☆☆
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="col-sm-4">
+        <div><a target="_blank"><img class="imagen2" src="images/estilista2.jpg"></a></div>
+        <br>
+        <b>Nombre:</b>
+        Felipe Roldán
+        <br>
+        <br>
+        <b>Edad:</b>
+        26 años
+        <br>
+        <br>
+        <b>Teléfono:</b>
+        283-63-40
+        <br>
+        <br>
+        <b>Trabaja en:</b>
+        Amsterdan
+        <br>
+        <br>
+        <b>Calificación:</b>
+        ★★★★★
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="col-sm-4">
+       <div class="img"><a target="_blank"><img src="images/estilista4.jpg"></a></div>
+       <br>
+       <b>Nombre:</b>
+       Felipe Roldán
+       <br>
+       <br>
+       <b>Edad:</b>
+       26 años
+       <br>
+       <br>
+       <b>Teléfono:</b>
+       283-63-40
+       <br>
+       <br>
+       <b>Trabaja en:</b>
+       Amsterdan
+       <br>
+       <br>
+       <b>Calificación:</b>
+       ★★★★★
+       <br>
+       <br>
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
+       <br>
+       <br>
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
+       <br>
+       <br>
+       <br>
+       <br>
+     </div>
+   </div>
+ </div>
 </div>
 
-<div class="img"><a target="_blank"><img src="images/estilista4.jpg"></a>
-	<div class="information">
-		<br>
-		<b>Nombre:</b>
-		Felipe Roldán
-		<br>
-		<br>
-		<b>Edad:</b>
-		26 años
-		<br>
-		<br>
-		<b>Teléfono:</b>
-		283-63-40
-		<br>
-		<br>
-		<b>Trabaja en:</b>
-		Amsterdan
-		<br>
-		<br>
-		<b>Calificación:</b>
-		★★★☆☆
-		<br>
-		<br>
-		<a href="">Experiencias pasadas</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div><a href="">Ver más</a></div>
-	</div>
-	<div class="listacortes"><b>Cortes:</b></div>
-	<div class="listacortes">
-		<div><img src="images/corte3.jpg"></div>
-		<div><img src="images/corte4.jpg"></div>
-	</div>
+<!-- Modal Cortes-->
+<div class="modal fade" id="cortes" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cortes</h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+               <img src="images/corte1.jpg">
+             </div>
+           </div>
+         </div>
+       </div>
+       <div align="center">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+             <img src="images/corte2.jpg">
+           </div>
+         </div>
+       </div>
+     </div>
+     <div align="center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+           <img src="images/corte3.jpg">
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+ </div>
+ <div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+</div>
 </div>
 
-
-
-
-
-
-
-
-
-<div class="img"><a target="_blank"><img src="images/estilista2.jpg"></a>
-	<div class="information">
-		<br>
-		<b>Nombre:</b>
-		Felipe Roldán
-		<br>
-		<br>
-		<b>Edad:</b>
-		26 años
-		<br>
-		<br>
-		<b>Teléfono:</b>
-		283-63-40
-		<br>
-		<br>
-		<b>Trabaja en:</b>
-		Amsterdan
-		<br>
-		<br>
-		<b>Calificación:</b>
-		★★★★★
-		<br>
-		<br>
-		<a href="">Experiencias pasadas</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div><a href="">Ver más</a></div>
-	</div>
-	<div class="listacortes"><b>Cortes:</b></div>
-	<div class="listacortes">
-		<div><img src="images/corte5.jpg"></div>
-		<div><img src="images/corte6.jpg"></div>
-	</div>
 </div>
-<div class="img"><a target="_blank"><img src="images/estilista1.jpg"></a>
-	<div class="information">
-		<br>
-		<b>Nombre:</b>
-		Felipe Roldán
-		<br>
-		<br>
-		<b>Edad:</b>
-		26 años
-		<br>
-		<br>
-		<b>Teléfono:</b>
-		283-63-40
-		<br>
-		<br>
-		<b>Trabaja en:</b>
-		Amsterdan
-		<br>
-		<br>
-		<b>Calificación:</b>
-		★★★★☆
-		<br>
-		<br>
-		<a href="">Experiencias pasadas</a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div><a href="">Ver más</a></div>
-	</div>
-	<div class="listacortes"><b>Cortes:</b></div>
-	<div class="listacortes">
-		<div><img src="images/cut2.jpg"></div>
-		<div><img src="images/corte1.jpg"></div>
-	</div>
 </div>
 
+<!-- Modal Opinión-->
+<div class="modal fade" id="opinion" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Opiniones</h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+          <div class="contenido">
+            <div class="form-group row">
+              <label for="nombre" style="text-align:left;">Simona Restrepo dice:</label>
+              <label for="nombre" style="text-align:left;">Excelente estilista</label>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>

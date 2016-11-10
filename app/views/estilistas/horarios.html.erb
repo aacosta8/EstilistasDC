@@ -1,0 +1,20 @@
+<br><h1 align="center">Horarios registrados</h1>
+<br>
+<style>
+	.panel-default{
+		width: 70%;
+		text-align: left;
+	}
+</style>
+
+<% @schedules.each do |schedule| %>
+<div align="center">
+	<div class="panel panel-default">
+	<div class="panel-heading"><h3 class="panel-title"><small>Hora registrado </small><span class="pull-right"></span></span></h3></div>
+		<div class="panel-body">
+			El día <%= schedule.fecha %> inicia a las <%= schedule.hora_inicio.hour %>:<%= schedule.hora_inicio.min %> con el estilista <%= Person.find_by(id: Stylist.find_by(id: schedule.stylist_id).person_id).nombre %>
+		</div>
+	</div>
+
+</div>
+<% end %>
