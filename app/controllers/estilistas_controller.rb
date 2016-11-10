@@ -105,6 +105,12 @@ def verexpest
   end
 end
 
+def horarios
+  if autorizado("Estilista")
+  end
+  @schedules = Schedule.all.order("created_at ASC")
+end
+
 private
 
 def updateestilista_params

@@ -79,6 +79,11 @@ class ClientesController < ApplicationController
     if autorizado("Cliente")
     end
   end
+  def citasProgramadas
+    if autorizado("Cliente")
+    end
+    @schedules = Schedule.all.order("created_at ASC")
+  end
 
   private
 

@@ -1,4 +1,16 @@
+<style>
+    .container{
+        width: 70%;
+        text-align: left;
+    }
+    .alinear{
+        text-align:center;
+        margin:auto;
+    }
+</style>
 <link rel="stylesheet" type="text/css" href="css/clientes/clientes_experiencias.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <br>
 <h1 align="center">Experiencias</h1>
 <div class="img"><a target="_blank">
@@ -87,4 +99,58 @@
         <br>
         <br>
     </div>
+</div>
+
+<div class="container">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Nueva experiencia</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Nueva experiencia</h4>
+      </div>
+      <div class="modal-body">
+          <div align="center">
+            <div class="container">
+                <div class="form-group row">
+                    <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Introduce la fecha">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="autor" class="col-sm-2 col-form-label">Autor</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="autor" id="autor" placeholder="Introduce el nombre del autor"> 
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="mensaje" class="col-sm-2 col-form-label">Mensaje</label>
+                    <div class="col-sm-10">
+                        <textarea type="text" class="form-control" name="autor" id="autor" placeholder="Introduce tu relato"></textarea> 
+                    </div>
+                </div>
+                <div class="form-group row">
+                <label for="foto" class="col-sm-2 col-form-label">Foto (opcional)</label>
+                <div class="col-sm-10">
+                <label class="btn btn-default btn-file">
+                    Adjuntar<input type="file" style="display: none;">
+                </label>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+  </div>
+</div>
+
+</div>
 </div>

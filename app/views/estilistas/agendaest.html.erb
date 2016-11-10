@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../css/estilistas/agendaest.css">
+<!-- <link rel="stylesheet" type="text/css" href="../css/estilistas/agendaest.css">
 <link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
 <br>
 <h1 align="center">Agenda</h1>
@@ -26,12 +26,66 @@
   	<option value="01:00">1 hora</option>
 	</select>
 	<!-- <input type="text" name="field2" class="field-style field-split align-full" placeholder="Lapso" /> -->
-</li>
+<!-- </li>
 <li>
 <br>
 <div align="center"><input type="submit" value="Generar" class="myButton"/></div>
 </li>
 </ul>
-<% end %> 
+<% end %>  -->
 
+<style>
+  .container{
+    width: 70%;
+    text-align: left;
+  }
+  .alinear{
+    text-align:center;
+    margin:auto;
+  }
+</style>
+<br>
+<h1 align="center">Agenda</h1><br>
+<div align="center">
+  <div class="container">
+    <%= form_tag '/agendaest/guardar', class: 'form-style-9' do %>
+    <div class="form-group row">
+      <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Introduce la fecha">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="horain" class="col-sm-2 col-form-label">Hora inicio</label>
+      <div class="col-sm-10">
+        <input type="time" class="form-control" name="horain" id="horain" placeholder="Introduce la hora de inicio de tu día"> 
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="horafin" class="col-sm-2 col-form-label">Hora fin</label>
+      <div class="col-sm-10">
+        <input type="time" class="form-control" name="horafin" id="horafin" placeholder="Introduce la hora en que finaliza tu día"> 
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="hasta" class="col-sm-2 col-form-label">Lapso</label>
+      <div class="col-sm-10">
+        <select class="form-control" name="lapso">
+          <option value="00:20">20 minutos</option>
+          <option value="00:30">30 minutos</option>
+          <option value="00:40">40 minutos</option>
+          <option value="00:50">50 minutos</option>
+          <option value="01:00">1 hora</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Generar</button>
+        <%= link_to "Ver horarios registrados", horarios_path, :class => "btn btn-primary" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 

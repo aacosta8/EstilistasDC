@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   root to:'welcome#main'
   get '/main'  => 'welcome#main'
   get '/sobreNosotros'  => 'welcome#sobreNosotros'
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get '/misCitas' => 'clientes#misCitas'
   get '/listaCitas' => 'clientes#listaCitas'
+  get 'citasProgramadas' => 'clientes#citasProgramadas'
   get '/puntosCercanos' => 'clientes#puntosCercanos'
   get '/estilistas' => 'clientes#estilistas'
   get '/experiencias' => 'clientes#experiencias'
@@ -30,8 +31,8 @@ Rails.application.routes.draw do
 
   get '/agendaest' => 'estilistas#agendaest'
   post '/agendaest/guardar' => 'estilistas#agendaestnew'
+  get '/horarios' => 'estilistas#horarios'
 
-  get '/pubexpest' => 'estilistas#pubexpest'
   get '/verexpest' => 'estilistas#verexpest'
 
   post '/entrar' => 'welcome#entrar'
