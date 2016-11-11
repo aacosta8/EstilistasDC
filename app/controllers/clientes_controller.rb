@@ -58,6 +58,17 @@ class ClientesController < ApplicationController
 
   end
 
+  def nuevaexperiencia
+    if autorizado("Cliente")
+    end
+    datos = nuevaexperiencia_params
+    experiencia = Experience.new
+    experiencia.person_id = session[:persona_id]
+    experiencia.comentario = datos[:mensaje]
+
+    experiencia.save
+   end
+
   def misCitas
     if autorizado("Cliente")
     end
@@ -89,5 +100,9 @@ class ClientesController < ApplicationController
 
   def updatecliente_params
     params.permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :tipo_discapacidad, :direccion, :barrio)
+  end
+
+  def nuevaexperiencia_params
+    params.permit(:mensaje, :foto)
   end
 end

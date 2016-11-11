@@ -22,11 +22,6 @@ class EstilistasController < ApplicationController
     final= datos[:horafin].to_time.hour* 60 + datos[:horafin].to_time.min
     lapso= datos[:lapso].to_time.hour* 60 + datos[:lapso].to_time.min
 
-
-    puts inicial
-    puts final
-    puts lapso
-
     var = (final - inicial) / lapso
 
     horainicio = inicial

@@ -1,96 +1,80 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Estilistas de Corazón</title>
+  <title>Responsive Retina-Friendly Menu</title>
   <meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
   <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
-  <meta name="author" content="Codrops" />
-  <link rel="shortcut icon" href="../logo.ico">
-  <link rel="stylesheet" type="text/css" href="css/default.css" />
-  <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <script src="scripts/modernizr.custom.js"></script> --> 
-
-<!--   <meta name="description" content="">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Codrops" />
-
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <link rel="stylesheet" href="css/main.css">
   <meta name="author" content="Codrops" />
   <link rel="shortcut icon" href="../logo.ico"> 
   <link rel="stylesheet" type="text/css" href="css/default.css" />
   <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <script src="scripts/modernizr.custom.js"></script> -->
-
-     <!--  <a href="/main"><img class="imagen" src="images/logo.PNG" width="130" height="125" align="right"></a> -->
-    <!--  <div class="container">
+  <script src="scripts/modernizr.custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <body>
+    <div class="container"> 
       <header>
-        <h1 align="center">Estilistas de Corazón</h1>  
+        <h1>Estilistas de Corazón</h1>  
       </header>
-
-    <div class="main clearfix">
-      <nav id="menu" class="nav">         
-        <ul>
-          <li>
-            <a href="/main">
-              <span class="icon">
-                <i aria-hidden="true" class="icon-home"></i>
-              </span>
-              <span>Inicio</span>
-            </a>
-          </li>
-          <li>
-            <a href="/sobreNosotros">
-              <span class="icon">
+      <div class="main clearfix">
+        <nav id="menu" class="nav">         
+          <ul>
+            <li>
+              <a href="/main">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-home"></i>
+                </span>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="/sobreNosotros">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-team"></i>
+                </span>
+                <span>Sobre nosotros</span>
+              </a>
+            </li>
+            <li>
+              <a href="/testimonios">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-blog"></i>
+                </span>
+                <span>Testimonios</span>
+              </a>
+            </li>
+            <li>
+              <a href="/contact">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-contact"></i>
+                </span>
+                <span>Contacto</span>
+              </a>
+            </li>
+            <li>
+              <a href="/noticias">
+                <span class="icon">
+                  <i aria-hidden="true" class="icon-services"></i>
+                </span>
+                <span>Noticias</span>
+              </a>
+            </li>
+            <li>
+             <a href="/login">
+               <span class="icon">
                 <i aria-hidden="true" class="icon-team"></i>
               </span>
-              <span>Sobre nosotros</span>
+              <span>Iniciar sesión</span>
             </a>
           </li>
-          <li>
-            <a href="/testimonios">
-              <span class="icon">
-                <i aria-hidden="true" class="icon-blog"></i>
-              </span>
-              <span>Testimonios</span>
-            </a>
-          </li>
-          <li>
-            <a href="/contact">
-              <span class="icon">
-                <i aria-hidden="true" class="icon-contact"></i>
-              </span>
-              <span>Contacto</span>
-            </a>
-          </li>
-          <li>
-            <a href="/noticias">
-              <span class="icon">
-                <i aria-hidden="true" class="icon-services"></i>
-              </span>
-              <span>Noticias</span>
-            </a>
-          </li>
-          <li>
-           <a href="/login">
-             <span class="icon">
-              <i aria-hidden="true" class="icon-team"></i>
-            </span>
-            <span>Iniciar sesión</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  </div>
-</head>
-<script>
+        </ul>
+      </nav>
+    </div>
+  </div><!-- /container -->
+  <script>
       //  The function to change the class
       var changeClass = function (r,className1,className2) {
         var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
@@ -122,116 +106,17 @@
         }
       }
     </script>
-    <br><br>
+  </head>
 
-    <body>
-
+  <body>
     <%= yield %>
 
-<!--   <div class="footer">
-  <div class="container">
-    <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
-  </div>
-</div> -->
-<!-- </body>
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
+      </div>
+    </div> 
+  </body>
 
 
-</html> -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Estilistas de Corazón</title>
-
-  <meta name="description" content="">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Codrops" />
-
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="author" content="Codrops" />
-  <link rel="shortcut icon" href="../logo.ico"> 
-  <link rel="stylesheet" type="text/css" href="css/default.css" />
-  <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <script src="scripts/modernizr.custom.js"></script>
-
-  <div class="container">
-    <header>
-      <a href="/main"><img src="images/logo.PNG" width="150" height="145" align="right"></a>
-      <h1 class="titulo" align="left">Estilistas de Corazón</h1>
-    </header>
-  </div>
-
-  <div class="main clearfix">
-    <nav id="menu" class="nav">         
-      <ul>
-        <li>
-          <a href="/main">
-            <span class="icon">
-              <i aria-hidden="true" class="icon-home"></i>
-            </span>
-            <span>Inicio</span>
-          </a>
-        </li>
-        <li>
-          <a href="/sobreNosotros">
-            <span class="icon">
-              <i aria-hidden="true" class="icon-team"></i>
-            </span>
-            <span>Sobre nosotros</span>
-          </a>
-        </li>
-        <li>
-          <a href="/testimonios">
-            <span class="icon">
-              <i aria-hidden="true" class="icon-blog"></i>
-            </span>
-            <span>Testimonios</span>
-          </a>
-        </li>
-        <li>
-          <a href="/contact">
-            <span class="icon">
-              <i aria-hidden="true" class="icon-contact"></i>
-            </span>
-            <span>Contacto</span>
-          </a>
-        </li>
-        <li>
-          <a href="/noticias">
-            <span class="icon">
-              <i aria-hidden="true" class="icon-services"></i>
-            </span>
-            <span>Noticias</span>
-          </a>
-        </li>
-        <li>
-         <a href="/login">
-           <span class="icon">
-            <i aria-hidden="true" class="icon-team"></i>
-          </span>
-          <span>Iniciar sesión</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <br><br>
-</head>
-
-
-
-
-
-<body>
-  <%= yield %>
-
-<!--   <div class="footer">
-  <div class="container">
-    <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
-  </div>
-</div> -->
-</body>
-
-
-</html>
+  </html>
