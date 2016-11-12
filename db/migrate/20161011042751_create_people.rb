@@ -9,7 +9,7 @@ class CreatePeople < ActiveRecord::Migration[5.0]
       t.string :telefono_movil
       t.string :telefono_fijo
       t.references :ubication, foreign_key: true
-      t.string :foto_perfil
+      t.attachment :foto_perfil
       t.string :tipo
 
       t.timestamps

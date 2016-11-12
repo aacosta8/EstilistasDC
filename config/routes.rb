@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get '/puntosCercanos' => 'clientes#puntosCercanos'
   get '/estilistas' => 'clientes#estilistas'
   get '/experiencias' => 'clientes#experiencias'
-  post '/experiencias/nuevaexperiencia' => 'clientes#nuevaexperiencia'
+  post '/experiencias' => 'clientes#nuevaexperiencia'
 
   get '/mainest' => 'estilistas#mainest'
   get '/perfilest' => 'estilistas#perfilest'

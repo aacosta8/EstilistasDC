@@ -25,14 +25,10 @@ body {
 	background: #f9f9f9;
 }
 
-h1{
-	top: 65px;
-}
 .imagen { position:absolute; top: 25px; left: 830px; z-index: 1; } 
 
 .titulo{
-	position:absolute;
-	bottom: 450px;
+	position: absolute;
 	left: 440px;
 }
 

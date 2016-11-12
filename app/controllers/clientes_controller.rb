@@ -8,6 +8,7 @@ class ClientesController < ApplicationController
     persona = Person.find_by(id: id_cliente)
     @nombre = persona.nombre
   end
+
   def perfil
     if autorizado("Cliente")
     end
@@ -61,12 +62,12 @@ class ClientesController < ApplicationController
   def nuevaexperiencia
     if autorizado("Cliente")
     end
-    datos = nuevaexperiencia_params
-    experiencia = Experience.new
+    experiencia = Experience.new nuevaexperiencia_params
     experiencia.person_id = session[:persona_id]
-    experiencia.comentario = datos[:mensaje]
 
-    experiencia.save
+    if experiencia.save
+      redirect_to experiencias_path
+    end
    end
 
   def misCitas
@@ -89,6 +90,7 @@ class ClientesController < ApplicationController
   def experiencias
     if autorizado("Cliente")
     end
+    @experience = Experience.new
   end
   def citasProgramadas
     if autorizado("Cliente")
@@ -103,6 +105,6 @@ class ClientesController < ApplicationController
   end
 
   def nuevaexperiencia_params
-    params.permit(:mensaje, :foto)
+    params.require(:experience).permit(:comentario,:foto_exp)
   end
 end

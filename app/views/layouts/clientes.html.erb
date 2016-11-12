@@ -10,41 +10,50 @@
  <link rel="shortcut icon" href="../logo.ico"> 
  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
  <link rel="shortcut icon" href="../corazon.ico"> 
- <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
- <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
+<!--  <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+ <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css"> -->
  <link rel="stylesheet" href="css/demo.css">
  <link rel="stylesheet" href="css/navigation-icons.css">
  <link rel="stylesheet" href="css/slicknav/slicknav.min.css">
-
+ <link rel="stylesheet" href="css/default.css">
  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
+  <div class="container"> 
+    <header>
+      <div><a href="/main"><img class="imagen" src="images/logo.PNG" width="150" height="145"></a></div>
+      <h1 class="titulo">Estilistas de Corazón</h1> 
+    </header>
+  </div><br><br><br><br>
 
   <nav class="menu-navigation-icons">
     <a href="/mainC" class="menu-magenta"><i class="fa fa-home"></i><span>Inicio</span>
-    <a href="/perfil" class="menu-blue"><i class="fa fa-user"></i><span>Perfil</span></a>
-    <a href="/misCitas" class="menu-green"><i class="fa fa-calendar"></i><span>Pedir cita</span></a>
-    <a href="/puntosCercanos" class="menu-yellow"><i class="fa fa-location-arrow"></i><span>Ubicación</span></a>
-    <a href="/estilistas" class="menu-blue"><i class="fa fa-users"></i><span>Estilistas</span></a>
-    <a href="/experiencias" class="menu-green"><i class="fa fa-comment"></i><span>Experiencias</span></a>
-    <a href="/main" class="menu-red"><i class="fa fa-remove"></i><span>Salir</span></a>
-  </nav>
+      <a href="/perfil" class="menu-blue"><i class="fa fa-user"></i><span>Perfil</span></a>
+      <a href="/misCitas" class="menu-green"><i class="fa fa-calendar"></i><span>Pedir cita</span></a>
+      <a href="/puntosCercanos" class="menu-yellow"><i class="fa fa-location-arrow"></i><span>Ubicación</span></a>
+      <a href="/estilistas" class="menu-blue"><i class="fa fa-users"></i><span>Estilistas</span></a>
+      <a href="/experiencias" class="menu-green"><i class="fa fa-comment"></i><span>Experiencias</span></a>
+      <a href="/main" class="menu-red"><i class="fa fa-remove"></i><span>Salir</span></a>
+    </nav>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="scripts/jquery.slicknav.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="scripts/jquery.slicknav.min.js"></script>
 
-  <script>
-    $(function(){
-      $('.menu-navigation-icons').slicknav();
-    });
-  </script>
+    <script>
+      $(function(){
+        $('.menu-navigation-icons').slicknav();
+      });
+    </script>
 
 
-</head>
+  </head>
 
-<body>
-  <%= yield %>
+  <body>
+    <%= yield %>
 
-</body>
-</html>
+  </body>
+  </html>

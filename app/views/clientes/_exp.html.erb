@@ -1,0 +1,21 @@
+<%= form_for @experience, :url => experiencias_path, html: { multipart: true } do |f| %>
+<div class="modal-body">
+  <div align="center">
+    <div class="contenido">
+      <div class="form_group row">
+        <%= f.label :comentario, class: "col-sm-2 col-form-label" %>
+        <%= f.text_field :comentario, class: "form-control" %>
+      </div>
+      <div class="form_group row">
+        <%= f.label :foto_exp, class: "col-sm-2 col-form-label" %>
+        <%= f.file_field :foto_exp, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <%= f.submit class: "btn btn-primary" %>
+  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+</div>
+<% end %>
