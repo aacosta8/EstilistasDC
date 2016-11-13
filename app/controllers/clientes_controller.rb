@@ -49,7 +49,7 @@ class ClientesController < ApplicationController
     cliente = Customer.find_by(person_id: id_cliente)
     cliente.tipo_discapacidad = datos[:tipo_discapacidad]
 
-    ubicacion = Ubication.find_by(id: persona.id)
+    ubicacion = Ubication.new
     ubicacion.direccion = datos[:direccion]
     ubicacion.barrio = datos[:barrio]
 

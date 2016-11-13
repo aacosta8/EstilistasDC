@@ -98,7 +98,24 @@ end
 def verexpest
   if autorizado("Estilista")
   end
+
+  @experience = Experience.new
+
 end
+
+def nuevaverexpest
+  if autorizado("Estilista")
+  end
+
+  experiencia = Experience.new nuevaexperiencia_params
+    experiencia.person_id = session[:persona_id]
+
+    if experiencia.save
+      redirect_to verexpest_path
+    end
+
+end
+
 
 def horarios
   if autorizado("Estilista")
@@ -111,4 +128,9 @@ private
 def updateestilista_params
   params.permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :correo_electronico)
 end
+
+def nuevaexperiencia_params
+    params.require(:experience).permit(:comentario,:foto_exp)
+end
+
 end

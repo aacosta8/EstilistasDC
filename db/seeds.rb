@@ -12,8 +12,8 @@ Person.destroy_all
 Ubication.destroy_all
 
 ubicacion = Ubication.create([{
-	barrio: "default",
-	direccion: "default"
+	barrio: "",
+	direccion: ""
 	}])
 
 

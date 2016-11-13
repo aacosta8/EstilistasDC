@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to:'welcome#main'
+
   get '/main'  => 'welcome#main'
   get '/sobreNosotros'  => 'welcome#sobreNosotros'
   get '/testimonios'  => 'welcome#testimonios'
@@ -35,6 +36,7 @@ Rails.application.routes.draw do
   get '/horarios' => 'estilistas#horarios'
 
   get '/verexpest' => 'estilistas#verexpest'
+  post '/verexpest' => 'estilistas#nuevaverexpest'
 
   post '/entrar' => 'welcome#entrar'
 
