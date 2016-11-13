@@ -74,24 +74,29 @@ class ClientesController < ApplicationController
     if autorizado("Cliente")
     end
   end
+
   def listaCitas
     if autorizado("Cliente")
     end
     @schedules = Schedule.all.order("created_at ASC")
   end
+
   def puntosCercanos
     if autorizado("Cliente")
     end
   end
+
   def estilistas
     if autorizado("Cliente")
     end
   end
+
   def experiencias
     if autorizado("Cliente")
     end
     @experience = Experience.new
   end
+  
   def citasProgramadas
     if autorizado("Cliente")
     end

@@ -25,11 +25,11 @@ body {
 	background: #f9f9f9;
 }
 
-.imagen { position:absolute; top: 25px; left: 830px; z-index: 1; } 
+.imagen { position:absolute; top: 4%; left: 62%; z-index: 1; width: 10%; height: 20%; } 
 
 .titulo{
 	position: absolute;
-	left: 440px;
+	left: 32%;
 }
 
 a {
@@ -45,7 +45,7 @@ a:hover {
 .container > header {
 	width: 100%;
 	margin: 0 auto;
-	padding: 2em;
+	padding: 1em;
 }
 
 .main {
@@ -56,7 +56,6 @@ a:hover {
 .container > header {
 	text-align: center;
 	font-size: 16px;
-	padding: 4em 2em 3em;
 	background: rgba(0,0,0,0.01);
 }
 
