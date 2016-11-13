@@ -16,6 +16,7 @@ class ClientesController < ApplicationController
     @persona = Person.find_by(id: id_cliente)
     @cliente = Customer.find_by(person_id: id_cliente)
     @ubicacion = Ubication.find_by(id: @persona.ubication_id)
+
   end
 
   def editarcliente
@@ -27,23 +28,28 @@ class ClientesController < ApplicationController
 
     id_cliente = session[:persona_id]
 
-    persona = Person.find_by(id: id_cliente) 
-    persona.nombre = datos[:nombre]
-    persona.apellido = datos[:apellido]
-    persona.fecha_nacimiento = datos[:fecha_nacimiento]
-    persona.telefono_movil = datos[:telefono_movil]
-    persona.telefono_fijo = datos[:telefono_fijo]
-    persona.foto_perfil = datos[:foto_perfil]
-
-    cliente = Customer.find_by(person_id: id_cliente)
-    cliente.tipo_discapacidad = updatecliented_params[:tipo_discapacidad]
-
     ubicacion = Ubication.new
-    ubicacion.direccion = updateclienteu_params[:barrio]
-    ubicacion.barrio = updateclienteu_params[:direccion]
+    ubicacion.direccion = updateclienteu_params[:direccion]
+    ubicacion.barrio = updateclienteu_params[:barrio]
 
-    if persona.save and cliente.save and ubicacion.save
-      redirect_to perfil_path
+    if ubicacion.save
+      persona = Person.find_by(id: id_cliente) 
+      persona.nombre = datos[:nombre]
+      persona.apellido = datos[:apellido]
+      persona.fecha_nacimiento = datos[:fecha_nacimiento]
+      persona.telefono_movil = datos[:telefono_movil]
+      persona.telefono_fijo = datos[:telefono_fijo]
+      persona.foto_perfil = datos[:foto_perfil]
+      persona.ubication_id = ubicacion.id
+
+      cliente = Customer.find_by(person_id: id_cliente)
+      cliente.tipo_discapacidad = updatecliented_params[:tipo_discapacidad]
+
+
+
+      if cliente.save and persona.save
+        redirect_to perfil_path
+      end
     end
 
   end

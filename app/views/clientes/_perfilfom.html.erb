@@ -2,7 +2,7 @@
 <%= form_for @cliente, :url => perfil_path, html: { multipart: true } do |j| %>
 <%= form_for @ubicacion, :url => perfil_path, html: { multipart: true } do |i| %>
 
-<% if @persona.foto_perfil != "/foto_perfils/original/missing.png" %>
+<% if @persona.foto_perfil_file_name %>
 <div align="center"><img src="<%= @persona.foto_perfil %>" width="150" height="145"></div><br>
 <% end %>
 
