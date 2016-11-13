@@ -1,0 +1,38 @@
+.panel-default{
+	width: 70%;
+	text-align: left;
+}
+
+.alinear{
+	text-align:center;
+	margin:auto;
+}
+.row{
+	width: 100%;
+}
+.estilista{
+	width: 45%;
+	height: 25%;
+}
+.imagen2{
+	width: 40%;
+	height: 25%;
+}
+.boton{
+	width: 70%;
+	padding-left: 13%;
+}
+.contenido{
+	width: 70%;
+}
+.imgmodal{
+	width: 30%;
+}
+.imagen1{
+	width: 45%;
+	height: 25%;
+}
+.container1{
+	width: 70%;
+	text-align: left;
+}
