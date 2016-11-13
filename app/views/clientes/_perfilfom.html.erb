@@ -1,0 +1,86 @@
+<%= form_for @persona, :url => perfil_path, html: { multipart: true } do |f| %>
+<%= form_for @cliente, :url => perfil_path, html: { multipart: true } do |j| %>
+<%= form_for @ubicacion, :url => perfil_path, html: { multipart: true } do |i| %>
+
+<% if @persona.foto_perfil != "/foto_perfils/original/missing.png" %>
+<div align="center"><img src="<%= @persona.foto_perfil %>" width="150" height="145"></div><br>
+<% end %>
+
+<%@persona.foto_perfil %>
+
+<div align="center">
+	<div class="container">
+		<div class="form-group row">
+			<%= f.label :nombre, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= f.text_field :nombre, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= f.label :apellido, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= f.text_field :apellido, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= f.label :fecha_nacimiento, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= f.date_field :fecha_nacimiento, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= f.label :teléfono_fijo, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= f.text_field :telefono_fijo, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= f.label :teléfono_movil, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= f.text_field :telefono_movil, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= j.label :tipo_discapacidad, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= j.text_field :tipo_discapacidad, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= i.label :barrio, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= i.text_field :barrio, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<%= i.label :dirección, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10">  
+				<%= i.text_field :direccion, class: "form-control", :required => true %>
+			</div>
+		</div>
+
+		<div class="form_group row">
+			<%= f.label :foto_perfil, class: "col-sm-2 col-form-label" %>
+			<div class="col-sm-10"> 
+				<%= f.file_field :foto_perfil, class: "form-control" %>
+			</div>
+		</div>
+		<br>
+		<div class="form-group row">
+			<div style="padding-left: 48%;" class="offset-sm-2 col-sm-10">
+				<button type="submit" class="btn btn-primary">Editar</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+<% end %>
+<% end %>
+<% end %>

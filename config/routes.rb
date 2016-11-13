@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/mainC'  => 'clientes#mainC'
   get '/perfil' => 'clientes#perfil'
-  post '/perfil/editar' => 'clientes#editarcliente'
+  patch '/perfil' => 'clientes#editarcliente'
 
   get '/misCitas' => 'clientes#misCitas'
   get '/listaCitas' => 'clientes#listaCitas'

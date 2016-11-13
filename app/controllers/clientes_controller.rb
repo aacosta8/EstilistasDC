@@ -11,24 +11,11 @@ class ClientesController < ApplicationController
 
   def perfil
     if autorizado("Cliente")
-    end
-
+    end 
     id_cliente = session[:persona_id]
-    
-    persona = Person.find_by(id: id_cliente)
-    @nombre = persona.nombre
-    @apellido = persona.apellido
-    @fecha_nacimiento = persona.fecha_nacimiento
-    @telefono_fijo = persona.telefono_fijo
-    @telefono_movil = persona.telefono_movil
-
-    ubicacion = Ubication.find_by(id: persona.id)
-    @direccion = ubicacion.direccion
-    @barrio = ubicacion.barrio
-
-    cliente = Customer.find_by(person_id: id_cliente)
-    @tipo_discapacidad = cliente.tipo_discapacidad
-
+    @persona = Person.find_by(id: id_cliente)
+    @cliente = Customer.find_by(person_id: id_cliente)
+    @ubicacion = Ubication.find_by(id: @persona.ubication_id)
   end
 
   def editarcliente
@@ -37,25 +24,27 @@ class ClientesController < ApplicationController
 
     datos = updatecliente_params
 
+
     id_cliente = session[:persona_id]
 
-    persona = Person.find_by(id: id_cliente)
+    persona = Person.find_by(id: id_cliente) 
     persona.nombre = datos[:nombre]
     persona.apellido = datos[:apellido]
     persona.fecha_nacimiento = datos[:fecha_nacimiento]
     persona.telefono_movil = datos[:telefono_movil]
     persona.telefono_fijo = datos[:telefono_fijo]
+    persona.foto_perfil = datos[:foto_perfil]
 
     cliente = Customer.find_by(person_id: id_cliente)
-    cliente.tipo_discapacidad = datos[:tipo_discapacidad]
+    cliente.tipo_discapacidad = updatecliented_params[:tipo_discapacidad]
 
     ubicacion = Ubication.new
-    ubicacion.direccion = datos[:direccion]
-    ubicacion.barrio = datos[:barrio]
+    ubicacion.direccion = updateclienteu_params[:barrio]
+    ubicacion.barrio = updateclienteu_params[:direccion]
 
-    persona.save
-    cliente.save
-    ubicacion.save
+    if persona.save and cliente.save and ubicacion.save
+      redirect_to perfil_path
+    end
 
   end
 
@@ -68,7 +57,7 @@ class ClientesController < ApplicationController
     if experiencia.save
       redirect_to experiencias_path
     end
-   end
+  end
 
   def misCitas
     if autorizado("Cliente")
@@ -101,7 +90,15 @@ class ClientesController < ApplicationController
   private
 
   def updatecliente_params
-    params.permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :tipo_discapacidad, :direccion, :barrio)
+    params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
+  end
+
+  def updatecliented_params
+    params.require(:customer).permit(:tipo_discapacidad)
+  end
+
+  def updateclienteu_params
+    params.require(:ubication).permit(:barrio, :direccion)
   end
 
   def nuevaexperiencia_params
