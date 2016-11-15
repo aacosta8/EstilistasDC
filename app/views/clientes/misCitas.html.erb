@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/clientes.css">	
 <br>
+<%= form_tag '/listaCitas' do %>
 <h1 align="center">Pedir cita</h1><br>
 <div align="center">
 	<div class="container1">
@@ -14,12 +15,15 @@
 				<div class="col-sm-10">
 					<input type="text" class="form-control" name="hora" id="apellido" placeholder="Introduce la hora para tu cita"> 
 				</div>
+
 			</div>
+			<br>
 				<div class="form-group row">
-					<div style="padding-left: 38%;" class="offset-sm-2 col-sm-10">
-						<%= link_to "Buscar", listaCitas_path, :class => "btn btn-primary" %>
-						<%= link_to "Ver citas programadas", citasProgramadas_path, :class => "btn btn-primary" %>
+					<div style="padding-left: 47%;" class="offset-sm-2 col-sm-10">
+						<button type="submit" value="Buscar" class="btn btn-primary">Buscar</button>
 					</div>
 				</div>
 	</div>
 </div>
+
+<% end %>

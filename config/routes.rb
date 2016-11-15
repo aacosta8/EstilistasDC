@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   patch '/perfil' => 'clientes#editarcliente'
 
   get '/misCitas' => 'clientes#misCitas'
-  get '/listaCitas' => 'clientes#listaCitas'
+  post '/listaCitas' => 'clientes#listaCitas'
+  post '/crearcita' => 'clientes#crearcita'
+
   get 'citasProgramadas' => 'clientes#citasProgramadas'
   get '/puntosCercanos' => 'clientes#puntosCercanos'
   get '/estilistas' => 'clientes#estilistas'
@@ -32,6 +34,7 @@ Rails.application.routes.draw do
   post '/cortesest' => 'estilistas#agregarcorte'
 
   get '/citaspest' => 'estilistas#citaspest'
+  post '/confirmarcita' => 'estilistas#confirmarcita'
 
   get '/agendaest' => 'estilistas#agendaest'
   post '/agendaest/guardar' => 'estilistas#agendaestnew'

@@ -6,6 +6,8 @@
     <thead>
       <tr>
         <th>Cliente</th>
+        <th>Teléfono fijo</th>
+        <th>Teléfono móvil</th>
         <th>Fecha</th>
         <th>Hora</th>
         <th>Dirección</th>
@@ -13,44 +15,24 @@
       </tr>
     </thead>
     <tbody>
+      
+      <% @citasp.each do |cita| %>
+      <%= form_tag '/confirmarcita' do %>
       <tr>
-        <th scope="row">Alejandro González</th>
-        <td>15-11-16</td>
-        <td>1 pm</td>
-        <td>Calle 104 E # 34-50</td>
-        <td><input type="checkbox"></td>
+        <th scope="row"><%= Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).nombre%> 
+        <%= Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).apellido%></th>
+        <td><%= Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).telefono_fijo%></td>
+        <td><%= Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).telefono_movil%></td>
+        <td><%= cita.fecha%></td>
+        <td><%= cita.hora_inicio%></td>
+        <td><%= Ubication.find_by(id: (Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).ubication_id)).direccion%></td>
+        <td> <button name="confirmar" value="1" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></td>
+        <td> <button name="cancelar" value="2" type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></td>
+        <input type="hidden" name="id"  value="<%= cita.id%>">
       </tr>
-      <tr>
-        <th scope="row">Inés Betancur</th>
-        <td>15-11-16</td>
-        <td>1:30 pm</td>
-        <td>Calle 104 D # 33-50</td>
-        <td><input type="checkbox"></td>
-      </tr>
-      <tr>
-        <th scope="row">Héctor Rodríguez</th>
-        <td>15-11-16</td>
-        <td>2 pm</td>
-        <td>Calle 103 A # 20-50</td>
-        <td><input type="checkbox"></td>
-      </tr>
-      <tr>
-        <th scope="row">Darío Vélez</th>
-        <td>15-11-16</td>
-        <td>2:30 pm</td>
-        <td>Calle 103 A # 20-53</td>
-        <td><input type="checkbox"></td>
-      </tr>
+      <% end %>
+      <% end %>
     </tbody>
   </table><br>
-  <div align="center">
-  <div class="container1">
-  <div class="form-group row">
-    <div style="padding-left: 42%;" class="offset-sm-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">Confirmar</button>
-      <button type="submit" class="btn btn-primary">Cancelar</button>
-    </div>
-  </div>
-  </div>
-  </div>
+
 </div>

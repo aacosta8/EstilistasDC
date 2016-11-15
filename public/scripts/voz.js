@@ -27,8 +27,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }
     recognition.onend = function() {
       recognizing = false;
-      document.getElementById("procesar").innerHTML = "";
-      console.log("terminó de eschucar, llegó a su fin");
+      console.log("terminó de escuchar, llegó a su fin");
 
     }
 
@@ -85,10 +84,10 @@ if (!('webkitSpeechRecognition' in window)) {
     if (recognizing == false) {
       recognition.start();
       recognizing = true;
-      document.getElementById("procesar").innerHTML = "";
+
     } else {
       recognition.stop();
       recognizing = false;
-      document.getElementById("procesar").innerHTML = "";
+
     }
   }

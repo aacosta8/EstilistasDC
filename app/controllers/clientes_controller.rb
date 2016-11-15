@@ -45,8 +45,6 @@ class ClientesController < ApplicationController
       cliente = Customer.find_by(person_id: id_cliente)
       cliente.tipo_discapacidad = updatecliented_params[:tipo_discapacidad]
 
-
-
       if cliente.save and persona.save
         redirect_to perfil_path
       end
@@ -73,46 +71,80 @@ class ClientesController < ApplicationController
   def listaCitas
     if autorizado("Cliente")
     end
-    @schedules = Schedule.all.order("created_at ASC")
+    datos = pedircita_params
+
+    @schedules = Schedule.where( fecha: datos[:fecha] , hora_inicio: datos[:hora])
+
+    if @schedules.none?
+     @schedules = Schedule.where( fecha: datos[:fecha] )
+   end
+ end
+
+ def crearcita
+  if autorizado("Cliente")
   end
 
-  def puntosCercanos
-    if autorizado("Cliente")
-    end
-  end
+  id_cliente = session[:persona_id]
 
-  def estilistas
-    if autorizado("Cliente")
-    end
-  end
+  schedule = Schedule.find_by(id: pedircitac_params[:id])
 
-  def experiencias
-    if autorizado("Cliente")
-    end
-    @experience = Experience.new
-  end
+  cita = Appointment.new
+  cita.fecha = schedule.fecha
+  cita.hora_inicio = schedule.hora_inicio
+  cita.estado = 0
+  cita.customer_id = Customer.find_by(person_id: id_cliente).id
+  cita.stylist_id = pedircitac_params[:estilista_id]
+  cita.save
   
-  def citasProgramadas
-    if autorizado("Cliente")
-    end
-    @schedules = Schedule.all.order("created_at ASC")
-  end
+end
 
-  private
 
-  def updatecliente_params
-    params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
-  end
 
-  def updatecliented_params
-    params.require(:customer).permit(:tipo_discapacidad)
+def puntosCercanos
+  if autorizado("Cliente")
   end
+end
 
-  def updateclienteu_params
-    params.require(:ubication).permit(:barrio, :direccion)
+def estilistas
+  if autorizado("Cliente")
   end
+end
 
-  def nuevaexperiencia_params
-    params.require(:experience).permit(:comentario,:foto_exp)
+def experiencias
+  if autorizado("Cliente")
   end
+  @experience = Experience.new
+end
+
+def citasProgramadas
+  if autorizado("Cliente")
+  end
+  @schedules = Schedule.all.order("created_at ASC")
+end
+
+private
+
+def updatecliente_params
+  params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
+end
+
+def updatecliented_params
+  params.require(:customer).permit(:tipo_discapacidad)
+end
+
+def updateclienteu_params
+  params.require(:ubication).permit(:barrio, :direccion)
+end
+
+def nuevaexperiencia_params
+  params.require(:experience).permit(:comentario,:foto_exp)
+end
+
+def pedircita_params
+  params.permit(:fecha,:hora)
+end
+
+def pedircitac_params
+  params.permit(:id, :estilista_id)
+end
 end

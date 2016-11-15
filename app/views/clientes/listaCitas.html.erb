@@ -2,13 +2,18 @@
 <br><h1 align="center">Horarios disponibles</h1>
 <br>
 <% @schedules.each do |schedule| %>
+<%= form_tag '/crearcita' do %>
+<input type="hidden" name="id"  value="<%= schedule.id%>">
+<input type="hidden" name="estilista_id"  value="<%= Stylist.find_by(id: schedule.stylist_id).id %>">
+
+
 <div align="center">
 	<div class="panel panel-default">
-	<div class="panel-heading"><h3 class="panel-title"><small>Cita disponible </small><span class="pull-right">Agendar</span></span></h3></div>
+	<div class="panel-heading"><h3 class="panel-title"><small>Cita disponible </small><span class="pull-right"><button type="submit" value="Agendar cita" class="btn btn-primary">Agendar</button></span></h3></div>
 		<div class="panel-body">
 			Hay una cita  el dia <%= schedule.fecha %> a las <%= schedule.hora_inicio.hour %>:<%= schedule.hora_inicio.min %> con el estilista <%= Person.find_by(id: Stylist.find_by(id: schedule.stylist_id).person_id).nombre %>
 		</div>
 	</div>
-
 </div>
+<% end %>
 <% end %>
