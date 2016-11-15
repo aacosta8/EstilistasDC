@@ -49,7 +49,6 @@ class ClientesController < ApplicationController
         redirect_to perfil_path
       end
     end
-
   end
 
   def nuevaexperiencia
