@@ -33,6 +33,9 @@ gem 'sweetalert-rails'
 gem 'sweet-alert-confirm'
 # gem 'rails-assets-sweetalert2', source: 'https://rails-assets.org'
 
+#gem Add to adjunt photos
+gem 'paperclip'
+
 #For Heroku config
 gem 'rails_12factor', group: :production  
 gem 'unicorn'

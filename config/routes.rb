@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to:'welcome#main'
+
   get '/main'  => 'welcome#main'
   get '/sobreNosotros'  => 'welcome#sobreNosotros'
   get '/testimonios'  => 'welcome#testimonios'
@@ -13,28 +14,34 @@ Rails.application.routes.draw do
 
   get '/mainC'  => 'clientes#mainC'
   get '/perfil' => 'clientes#perfil'
-  post '/perfil/editar' => 'clientes#editarcliente'
+  patch '/perfil' => 'clientes#editarcliente'
 
   get '/misCitas' => 'clientes#misCitas'
-  get '/listaCitas' => 'clientes#listaCitas'
+  post '/listaCitas' => 'clientes#listaCitas'
+  post '/crearcita' => 'clientes#crearcita'
+
   get 'citasProgramadas' => 'clientes#citasProgramadas'
   get '/puntosCercanos' => 'clientes#puntosCercanos'
   get '/estilistas' => 'clientes#estilistas'
   get '/experiencias' => 'clientes#experiencias'
-  post '/experiencias/nuevaexperiencia' => 'clientes#nuevaexperiencia'
+  post '/experiencias' => 'clientes#nuevaexperiencia'
 
   get '/mainest' => 'estilistas#mainest'
   get '/perfilest' => 'estilistas#perfilest'
-  post '/perfilest/editar' => 'estilistas#editarestilista'
+  patch '/perfilest' => 'estilistas#editarestilista'
 
   get '/cortesest' => 'estilistas#cortesest'
+  post '/cortesest' => 'estilistas#agregarcorte'
+
   get '/citaspest' => 'estilistas#citaspest'
+  post '/confirmarcita' => 'estilistas#confirmarcita'
 
   get '/agendaest' => 'estilistas#agendaest'
   post '/agendaest/guardar' => 'estilistas#agendaestnew'
   get '/horarios' => 'estilistas#horarios'
 
   get '/verexpest' => 'estilistas#verexpest'
+  post '/verexpest' => 'estilistas#nuevaverexpest'
 
   post '/entrar' => 'welcome#entrar'
 

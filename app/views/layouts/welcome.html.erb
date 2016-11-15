@@ -4,77 +4,117 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Responsive Retina-Friendly Menu</title>
+  <title>Estilistas de Corazón</title>
   <meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
   <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
   <meta name="author" content="Codrops" />
   <link rel="shortcut icon" href="../logo.ico"> 
   <link rel="stylesheet" type="text/css" href="css/default.css" />
   <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <script src="scripts/modernizr.custom.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <body>
-    <div class="container"> 
-      <header>
-        <h1>Estilistas de Corazón</h1>  
-      </header>
-      <div class="main clearfix">
-        <nav id="menu" class="nav">         
-          <ul>
-            <li>
-              <a href="/main">
-                <span class="icon">
-                  <i aria-hidden="true" class="icon-home"></i>
-                </span>
-                <span>Inicio</span>
-              </a>
-            </li>
-            <li>
-              <a href="/sobreNosotros">
-                <span class="icon">
-                  <i aria-hidden="true" class="icon-team"></i>
-                </span>
-                <span>Sobre nosotros</span>
-              </a>
-            </li>
-            <li>
-              <a href="/testimonios">
-                <span class="icon">
-                  <i aria-hidden="true" class="icon-blog"></i>
-                </span>
-                <span>Testimonios</span>
-              </a>
-            </li>
-            <li>
-              <a href="/contact">
-                <span class="icon">
-                  <i aria-hidden="true" class="icon-contact"></i>
-                </span>
-                <span>Contacto</span>
-              </a>
-            </li>
-            <li>
-              <a href="/noticias">
-                <span class="icon">
-                  <i aria-hidden="true" class="icon-services"></i>
-                </span>
-                <span>Noticias</span>
-              </a>
-            </li>
-            <li>
-             <a href="/login">
-               <span class="icon">
-                <i aria-hidden="true" class="icon-team"></i>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <style>
+   img {
+    vertical-align: middle;
+  }
+  .img-responsive{
+    text-align: center;
+    top: 4%;
+  }
+  .thumbnail > img,
+  .thumbnail a > img,
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .img-rounded {
+    border-radius: 6px;
+  }
+  .img-thumbnail {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  .img-circle {
+    border-radius: 50%;
+  }
+
+</style>
+
+<body>
+  <div class="container"> 
+    <header>
+      <div><a href="/main"><img class="img-responsive" src="images/logo.PNG" width="150" height="145"></a></div>
+      <h1 align="center">Estilistas de Corazón</h1>  
+    </header>
+    <div class="main clearfix">
+      <nav id="menu" class="nav">         
+        <ul>
+          <li>
+            <a href="/main">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-home"></i>
               </span>
-              <span>Iniciar sesión</span>
+              <span>Inicio</span>
             </a>
           </li>
-        </ul>
-      </nav>
-    </div>
-  </div><!-- /container -->
-  <script>
+          <li>
+            <a href="/sobreNosotros">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-team"></i>
+              </span>
+              <span>Sobre nosotros</span>
+            </a>
+          </li>
+          <li>
+            <a href="/testimonios">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-blog"></i>
+              </span>
+              <span>Testimonios</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-contact"></i>
+              </span>
+              <span>Contacto</span>
+            </a>
+          </li>
+          <li>
+            <a href="/noticias">
+              <span class="icon">
+                <i aria-hidden="true" class="icon-services"></i>
+              </span>
+              <span>Noticias</span>
+            </a>
+          </li>
+          <li>
+           <a href="/login">
+             <span class="icon">
+              <i aria-hidden="true" class="icon-team"></i>
+            </span>
+            <span>Iniciar sesión</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div><!-- /container -->
+<script>
       //  The function to change the class
       var changeClass = function (r,className1,className2) {
         var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
@@ -111,11 +151,6 @@
   <body>
     <%= yield %>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> Cortemos el cabello, no las esperanzas.</p>
-      </div>
-    </div> 
   </body>
 
 

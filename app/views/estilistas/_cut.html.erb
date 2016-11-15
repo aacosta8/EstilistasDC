@@ -1,0 +1,33 @@
+<%= form_for @haircut, :url => cortesest_path, html: { multipart: true } do |f| %>
+<div class="modal-body">
+  <div align="center">
+    <div class="contenido">
+      <div class="form_group row">
+        <%= f.label :nombre, class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">  
+          <%= f.text_field :nombre_corte, class: "form-control", :required => true %>
+        </div>
+      </div>
+      <br>
+      <div class="form_group row">
+        <%= f.label :descripcion, class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10"> 
+        <%= f.text_area :descripcion, class: "form-control" %>
+        </div>
+      </div>
+      <br>
+      <div class="form_group row">
+        <%= f.label :foto, class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10"> 
+        <%= f.file_field :foto, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <%= f.submit "Agregar corte",class: "btn btn-primary" %>
+  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+</div>
+<% end %>

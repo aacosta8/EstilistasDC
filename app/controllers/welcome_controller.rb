@@ -29,7 +29,6 @@ class WelcomeController < ApplicationController
   end
 
    def entrar
-
     parametros_seguros = entrar_params
     cedula = parametros_seguros[:cedula]
     nombre = parametros_seguros[:nombre]

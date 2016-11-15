@@ -1,53 +1,8 @@
-<!-- <link rel="stylesheet" type="text/css" href="../css/estilistas/agendaest.css">
-<link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
-<br>
-<h1 align="center">Agenda</h1>
-<%= form_tag '/agendaest/guardar', class: 'form-style-9' do %>
-<ul>
-<label for="fecha">Fecha</label>
-<li>
-    <input type="date" name="fecha" class="field-style field-split align-full" placeholder="Fecha" />
-</li>
-<label for="horain">Hora inicio</label>
-<li>
-  <input type="time" name="horain" class="field-style field-split align-full" placeholder="Hora inicio" />
-</li>
-<label for="horafin">Hora fin</label>
-<li>
-  <input type="time" name="horafin" class="field-style field-split align-full" placeholder="Hora fin" />
-</li>
-<label for="hasta">Lapso</label>
-<li>
-	<select class="field-style field-split align-full" name="lapso">
-  	<option value="00:20">20 minutos</option>
-  	<option value="00:30">30 minutos</option>
-  	<option value="00:40">40 minutos</option>
-  	<option value="00:50">50 minutos</option>
-  	<option value="01:00">1 hora</option>
-	</select>
-	<!-- <input type="text" name="field2" class="field-style field-split align-full" placeholder="Lapso" /> -->
-<!-- </li>
-<li>
-<br>
-<div align="center"><input type="submit" value="Generar" class="myButton"/></div>
-</li>
-</ul>
-<% end %>  -->
-
-<style>
-  .container{
-    width: 70%;
-    text-align: left;
-  }
-  .alinear{
-    text-align:center;
-    margin:auto;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="css/estilistas.css">
 <br>
 <h1 align="center">Agenda</h1><br>
 <div align="center">
-  <div class="container">
+  <div class="container1">
     <%= form_tag '/agendaest/guardar', class: 'form-style-9' do %>
     <div class="form-group row">
       <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
@@ -80,7 +35,7 @@
       </div>
     </div>
     <div class="form-group row">
-      <div class="offset-sm-2 col-sm-10">
+      <div style="padding-left: 38%;" class="offset-sm-2 col-sm-10">
         <button type="submit" class="btn btn-primary">Generar</button>
         <%= link_to "Ver horarios registrados", horarios_path, :class => "btn btn-primary" %>
       </div>

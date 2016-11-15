@@ -3,7 +3,7 @@ class CreateExperiences < ActiveRecord::Migration[5.0]
     create_table :experiences do |t|
       t.references :person, foreign_key: true
       t.string :comentario
-      t.string :foto_exp
+      t.attachment :foto_exp
 
       t.timestamps
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011042759) do
+ActiveRecord::Schema.define(version: 20161111200409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,9 +48,12 @@ ActiveRecord::Schema.define(version: 20161011042759) do
   create_table "experiences", force: :cascade do |t|
     t.integer  "person_id"
     t.string   "comentario"
-    t.string   "foto_exp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "foto_exp_file_name"
+    t.string   "foto_exp_content_type"
+    t.integer  "foto_exp_file_size"
+    t.datetime "foto_exp_updated_at"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.index ["person_id"], name: "index_experiences_on_person_id", using: :btree
   end
 
@@ -66,9 +69,12 @@ ActiveRecord::Schema.define(version: 20161011042759) do
   create_table "haircuts", force: :cascade do |t|
     t.string   "nombre_corte"
     t.string   "descripcion"
-    t.string   "foto"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "people", force: :cascade do |t|
@@ -80,10 +86,13 @@ ActiveRecord::Schema.define(version: 20161011042759) do
     t.string   "telefono_movil"
     t.string   "telefono_fijo"
     t.integer  "ubication_id"
-    t.string   "foto_perfil"
+    t.string   "foto_perfil_file_name"
+    t.string   "foto_perfil_content_type"
+    t.integer  "foto_perfil_file_size"
+    t.datetime "foto_perfil_updated_at"
     t.string   "tipo"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["ubication_id"], name: "index_people_on_ubication_id", using: :btree
   end
 

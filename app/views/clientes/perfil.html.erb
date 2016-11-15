@@ -1,16 +1,13 @@
-<!--body>
 
+<!--body>
 	<section id="container">
 		<h2>Perfil</h2>
 		<form name="hongkiat" id="hongkiat-form" method="post" action="#">
 			<div id="wrapping" class="clearfix" align="center">
 				<section id="aligned">
 					<input type="text" name="name" id="name" placeholder="Nombre" autocomplete="off" tabindex="1" class="txtinput">
-
 					<input type="text" name="name" id="name" placeholder="Apellidos" autocomplete="off" tabindex="1" class="txtinput">
-
 					<input type="text" name="name" id="name" placeholder="Tipo discapacidad" autocomplete="off" tabindex="1" class="txtinput">
-
 					<input type="text" name="name" id="name" placeholder="Dirección residencia" autocomplete="off" tabindex="1" class="txtinput">
 				</section>
 				<br>
@@ -27,7 +24,6 @@
 				swal("Bien", "Haz actualizado tus datos", "success");
 			}
 		</script>
-
 	</body>
 	</html-->
 	<link rel="stylesheet" href="css/voz.css">
@@ -44,64 +40,5 @@
 	</style>
 	<br>
 	<h1 align="center">Perfil</h1>
-	<div align="center"><img src="images/perfilc.jpg" width="150" height="145"></div><br>
-	<div align="center">
-		<div class="container">
-			<%= form_tag '/perfil/editar' do %>
-			<div class="form-group row">
-				<label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
-				<div class="col-sm-10">
-					<input id="inputPerfilCliente10" type="text" class="form-control" name="nombre" placeholder="Introduce tu nombre" value="<%= @nombre%>" onclick="procesar(10)">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="apellido" id="inputPerfilCliente11" placeholder="Introduce tu apellido" value="<%= @apellido%>"> 
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="fecha_nacimiento" class="col-sm-2 col-form-label">Cumpleaños</label>
-				<div class="col-sm-10">
-					<input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Introduce tu fecha de nacimiento" value="<%= @fecha_nacimiento%>">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="telefono_fijo" class="col-sm-2 col-form-label">Teléfono fijo</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="telefono_fijo" id="inputPerfilCliente12" placeholder="Introduc tu teléfono fijo" value="<%= @telefono_fijo%>">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="telefono_movil" class="col-sm-2 col-form-label">Teléfono móvil</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="telefono_movil" id="inputPerfilCliente13" placeholder="Introduce tu teléfono móvil" value="<%= @telefono_movil%>">
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="tipo_discapacidad" class="col-sm-2 col-form-label">Tipo de discapacidad</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="tipo_discapacidad" id="inputPerfilCliente14" placeholder="Introduce tu tipo de discapacidad" value="<%= @tipo_discapacidad%>">
-				</div><br>
-			</div>
-			<div class="form-group row">
-				<label for="direccion" class="col-sm-2 col-form-label">Dirección</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="direccion" id="inputPerfilCliente15" placeholder="Introduce tu dirección" value="<%= @direccion%>">
-				</div><br>
-			</div>
-			<div class="form-group row">
-				<label for="barrio" class="col-sm-2 col-form-label">Barrio</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" name="barrio" id="inputPerfilCliente16" placeholder="Introduce tu barrio" value="<%= @barrio%>">
-				</div><br>
-			</div>
 
-			<div class="form-group row">
-				<div style="padding-left: 48%;" class="offset-sm-2 col-sm-10">
-					<button type="submit" class="btn btn-primary">Editar</button>
-				</div>
-			</div>
-			<% end %>
-		</div>
-	</div>
+        <%= render "perfilfom" %>

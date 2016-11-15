@@ -1,54 +1,90 @@
-<link rel="stylesheet" type="text/css" href="../css/estilistas/cortesest.css">
-<link rel="stylesheet" type="text/css" href="../css/buttons.css"/>
-<br>
-<h1 align="center">Cortes</h1>
-<div class="img">
-	<a target="_blank" href="img_fjords.jpg">
-		<img src="images/corte5.jpg" alt="Trolltunga Norway" width="300" height="200">
-	</a>
-	<div class="desc">Características del corte ...</div>
+<link rel="stylesheet" type="text/css" href="css/estilistas.css">
+<br><h1 align="center">Cortes</h1><br>
+<div align="center">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div><a target="_blank"><img class="imagen1" src="images/corte5.jpg"></a></div>
+        <br>
+        <b>Nombre:</b> 
+        Skin fade
+        <br>
+        <b>Descripción:</b>
+        Este corte se caracteriza por...
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
+      </div>
+      <div class="col-sm-4">
+        <div><a target="_blank"><img class="imagen1" src="images/corte2.jpg"></a></div>
+        <br>
+        <b>Nombre:</b> 
+        Skin fade
+        <br>
+        <b>Descripción:</b>
+        Este corte se caracteriza por...
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
+      </div>
+      <div class="col-sm-4">
+        <div><a target="_blank"><img class="imagen1" src="images/corte6.jpg"></a></div>
+        <br>
+        <b>Nombre:</b> 
+        Skin fade
+        <br>
+        <b>Descripción:</b>
+        Este corte se caracteriza por...
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="img">
-	<a target="_blank" href="img_forest.jpg">
-		<img src="images/cut2.jpg" alt="Forest" width="600" height="400">
-	</a>
-	<div class="desc">Características del corte ...</div>
+<br><div style="padding-left: 46%;" class="boton">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarCorte">Agregar corte</button></div>
+
+<!-- Modal Leer más -->
+<div class="modal fade" id="leerMas" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Experiencia</h4>
+      </div>
+      <div class="modal-body">
+       <div><a target="_blank"><img class="imgmodal" src="images/corte5.jpg"></a></div>
+       <br>
+       <b>Descripción:</b>
+       Este corte se caracteriza por ser la última tendencia de la moda.
+       <br>
+       <br>
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+
+</div>
 </div>
 
-<div class="img">
-	<a target="_blank" href="img_lights.jpg">
-		<img src="images/corte1.jpg" alt="Northern Lights" width="600" height="400">
-	</a>
-	<div class="desc">Características del corte ...</div>
-</div>
+<!-- Modal Agregar corte -->
+<div class="modal fade" id="agregarCorte" role="dialog">
+  <div class="modal-dialog">
 
-<div class="img">
-	<a target="_blank" href="img_mountains.jpg">
-		<img src="images/corte2.jpg" alt="Mountains" width="600" height="400">
-	</a>
-	<div class="desc">Características del corte ...</div>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Agregar corte</h4>
+      </div>
+      
+      <%= render "cut" %>
+      
+    </div>
+  </div>
 </div>
-
-<div class="img">
-	<a target="_blank" href="img_mountains.jpg">
-		<img src="images/corte3.jpg" alt="Mountains" width="600" height="400">
-	</a>
-	<div class="desc">Características del corte ...</div>
-</div>
-
-<div class="img">
-	<a target="_blank" href="img_mountains.jpg">
-		<img src="images/corte4.jpg" alt="Mountains" width="600" height="400">
-	</a>
-	<div class="desc">Características del corte ...</div>
-</div>
-<div class="img">
-	<a target="_blank" href="img_mountains.jpg">
-		<img src="images/corte6.jpg" alt="Mountains" width="600" height="400">
-	</a>
-	<div class="desc">Características del corte ...</div>
-	<br>
-</div>
-
-<div align="center"><br><input type="submit" value="Añadir" class="myButton"/></div>

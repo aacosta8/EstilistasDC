@@ -1,0 +1,26 @@
+<%= form_for @experience, :url => verexpest_path, html: { multipart: true } do |f| %>
+<div class="modal-body">
+  <div align="center">
+    <div class="contenido">
+      <div class="form_group row">
+        <%= f.label :relato, class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">  
+          <%= f.text_area :comentario, class: "form-control", :required => true %>
+        </div>
+      </div>
+      <br>
+      <div class="form_group row">
+        <%= f.label :foto, class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10"> 
+        <%= f.file_field :foto_exp, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <%= f.submit "Registrar experiencia",class: "btn btn-primary" %>
+  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+</div>
+<% end %>
