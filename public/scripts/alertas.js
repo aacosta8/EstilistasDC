@@ -2,7 +2,7 @@ function alertas(x) {
   
     switch(x) {
     case 0:
-        swal("Te amo mi amor");
+        swal("Este es un mensaje");
         break;
     case 1:
         sweetAlert("Oops...", "Something went wrong!", "error");
