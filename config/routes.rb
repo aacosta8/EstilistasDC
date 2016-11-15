@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   get '/mainest' => 'estilistas#mainest'
   get '/perfilest' => 'estilistas#perfilest'
-  post '/perfilest/editar' => 'estilistas#editarestilista'
+  patch '/perfilest' => 'estilistas#editarestilista'
 
   get '/cortesest' => 'estilistas#cortesest'
   post '/cortesest' => 'estilistas#agregarcorte'
