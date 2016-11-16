@@ -23,16 +23,11 @@
         Barber Shop
         <br>
         <br>
-        <label for="input-1" class="control-label">Rate This</label>
-        <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
+        <b>Calificación:</b>
+        ★★★★★
         <br>
         <br>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
-        <br>
-        <br>
         <br>
         <br>
       </div>
@@ -62,11 +57,6 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
         <br>
         <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
-        <br>
-        <br>
-        <br>
-        <br>
       </div>
       <div class="col-sm-4">
        <div class="img"><a target="_blank"><img class="estilista" src="images/estilista4.jpg"></a></div>
@@ -94,16 +84,13 @@
        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
        <br>
        <br>
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
-       <br>
-       <br>
-       <br>
-       <br>
      </div>
    </div>
  </div>
 </div>
 
+
+<!-- Modal para cortes -->
 <div class="container text-center">
   <div class="modal fade" id="cortes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -117,7 +104,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-             <img class="img-responsive" src="images/ejemplo1.jpg" alt="...">
+             <img class="img-responsive"  alt="...">
              <div class="carousel-caption">
               Corte 1
             </div>
@@ -148,32 +135,3 @@
   </div>
 </div>
 </div>
-
-<!-- Modal Opinión-->
-<div class="modal fade" id="opinion" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Opiniones</h4>
-      </div>
-      <div class="modal-body">
-        <div align="center">
-          <div class="contenido">
-            <div class="form-group row">
-              <label for="nombre" style="text-align:left;">Simona Restrepo dice:</label>
-              <label for="nombre" style="text-align:left;">Excelente estilista</label>
-            </div>
-          </div>
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-
-    </div>
-  </div>

@@ -97,8 +97,6 @@ class ClientesController < ApplicationController
   
 end
 
-
-
 def puntosCercanos
   if autorizado("Cliente")
   end
@@ -107,6 +105,10 @@ end
 def estilistas
   if autorizado("Cliente")
   end
+
+  
+
+
 end
 
 def experiencias
