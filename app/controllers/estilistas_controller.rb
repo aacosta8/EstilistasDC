@@ -80,7 +80,25 @@ class EstilistasController < ApplicationController
 	def cortesest
 		if autorizado("Estilista")
 		end
+
+
 		@haircut = Haircut.new
+		@cortes = Haircut.all.order("created_at ASC")
+
+		@cortes.each do |corte|
+			puts corte.nombre_corte
+		end
+	end
+
+	def vercorte
+	idcorte= corte_params
+	@cut = Haircut.find_by(id: idcorte[:id])
+
+	@nombre = @cut.nombre_corte
+	@descripcion = @cut.descripcion
+	@foto = @cut.foto
+
+
 	end
 
 	def agregarcorte
@@ -196,5 +214,10 @@ end
 
 	def confirmarcita_params
 		params.permit(:confirmar,:cancelar,:id)
+	end
+end
+
+	def corte_params
+		params.permit(:id)
 	end
 end
