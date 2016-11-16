@@ -1,58 +1,29 @@
 <link rel="stylesheet" href="css/clientes.css">
 <br><h1 align="center">Estilistas</h1><br>
-
+<% @estilistas.each do |estilista| %>
 <div align="center">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div><a target="_blank"><img class="estilista" src="images/estilista3.jpg"></a></div>
+        <% if Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).foto_perfil_file_name %>
+        <div><a target="_blank"><img class="estilista" src="<%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).foto_perfil %>"></a></div>
+        <% end %>
         <br>
         <b>Nombre:</b>
-        Andrés Betancur
+        <%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).nombre%>
         <br>
         <br>
         <b>Edad:</b>
-        22 años
+        <%= (Time.now.year  -(Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).fecha_nacimiento).year)
+        %>
         <br>
         <br>
-        <b>Teléfono:</b>
-        273-83-85
+        <b>Teléfono fijo:</b>
+        <%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).telefono_fijo%>
         <br>
         <br>
         <b>Trabaja en:</b>
         Barber Shop
-        <br>
-        <br>
-        <label for="input-1" class="control-label">Rate This</label>
-        <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen2" src="images/estilista2.jpg"></a></div>
-        <br>
-        <b>Nombre:</b>
-        Felipe Roldán
-        <br>
-        <br>
-        <b>Edad:</b>
-        26 años
-        <br>
-        <br>
-        <b>Teléfono:</b>
-        283-63-40
-        <br>
-        <br>
-        <b>Trabaja en:</b>
-        Amsterdan
         <br>
         <br>
         <b>Calificación:</b>
@@ -68,42 +39,7 @@
         <br>
         <br>
       </div>
-      <div class="col-sm-4">
-       <div class="img"><a target="_blank"><img class="estilista" src="images/estilista4.jpg"></a></div>
-       <br>
-       <b>Nombre:</b>
-       Felipe Roldán
-       <br>
-       <br>
-       <b>Edad:</b>
-       26 años
-       <br>
-       <br>
-       <b>Teléfono:</b>
-       283-63-40
-       <br>
-       <br>
-       <b>Trabaja en:</b>
-       Amsterdan
-       <br>
-       <br>
-       <b>Calificación:</b>
-       ★★★★★
-       <br>
-       <br>
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
-       <br>
-       <br>
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
-       <br>
-       <br>
-       <br>
-       <br>
-     </div>
-   </div>
- </div>
-</div>
-
+<% end %>
 <div class="container text-center">
   <div class="modal fade" id="cortes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -177,3 +113,4 @@
 
     </div>
   </div>
+</div>

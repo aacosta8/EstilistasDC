@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/clientes.css">
 <br><h1 align="center">Experiencias</h1><br>
+<% @experiencias.each do |experiencia| %>
 <div align="center">
   <div class="container">
     <div class="row">
@@ -7,7 +8,7 @@
         <div><a target="_blank"><img class="imagen1" src="images/corte1.jpg"></a></div>
         <br>
         <b>Fecha:</b>
-        18/10/2016
+        12/12/2016
         <br>
         <br>
         <b>Autor:</b>
@@ -20,46 +21,12 @@
         <br>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
       </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte2.jpg"></a></div>
-        <br>
-        <b>Fecha:</b>
-        18/10/2016
-        <br>
-        <br>
-        <b>Autor:</b>
-        Jorge Vásquez
-        <br>
-        <br>
-        <b>Relato:</b>
-        El autor lamenta la pérdida del glamour en el panorama cinematográfico actual...
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
-      </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte3.jpg"></a></div>
-        <br>
-        <b>Fecha:</b>
-        18/10/2016
-        <br>
-        <br>
-        <b>Autor:</b>
-        Jorge Vásquez
-        <br>
-        <br>
-        <b>Relato:</b>
-        El autor lamenta la pérdida del glamour en el panorama cinematográfico actual...
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br>
       </div>
     </div>
-  </div>
-</div>
-
+    </div>
 <br><div style="padding-left: 45%;" class="boton">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Nueva experiencia</button></div>
+<% end %>
 
 <!-- Modal Nueva experiencia -->
 <div class="modal fade" id="myModal" role="dialog">
