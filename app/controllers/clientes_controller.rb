@@ -74,16 +74,19 @@ class ClientesController < ApplicationController
   
 end
 
-
-
 def puntosCercanos
 end
 
 def estilistas
+  if autorizado("Cliente")
+  end
+
+  @estilistas = Stylist.all.order("created_at ASC")
 end
 
 def experiencias
   @experience = Experience.new
+  @experiencias = Experience.all.order("created_at ASC")
 end
 
 def citasProgramadas
