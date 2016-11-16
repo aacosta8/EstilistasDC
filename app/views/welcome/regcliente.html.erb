@@ -1,23 +1,25 @@
 <link rel="stylesheet" type="text/css" href="../css/botones.css">
 <link rel="stylesheet" type="text/css" href="../css/welcome/contact.css">
+<link rel="stylesheet" href="css/voz.css">
+<script type="text/javascript" src="scripts/voz.js"></script>
 <%= form_tag '/regclientes', class: 'form-style-9' do %>
 
 <ul>
   <label for="Cedula">Cédula</label>
   <li>
-    <input type="text" id="cedula" name="cedula" class="field-style field-full align-none" placeholder="Introduce tu número de identificación" />
+    <input type="text" id="inputRegCliente24" name="cedula" class="field-style field-full align-none" placeholder="Introduce tu número de identificación" onclick="procesar(24)"/>
   </li>
   <label for="Nombre">Nombre</label>
   <li>
-    <input type="text" id="nombre" name="nombre" class="field-style field-full align-none" placeholder="Introduce tu nombre" required/>
+    <input type="text" id="inputRegCliente25" name="nombre" class="field-style field-full align-none" placeholder="Introduce tu nombre" required onclick="procesar(25)"/>
   </li>
   <label for="Apellido">Apellido</label>
   <li>
-    <input type="text" id="apellido" name="apellido" class="field-style field-full align-none" placeholder="Introduce tu apellido" />
+    <input type="text" id="inputRegCliente26" name="apellido" class="field-style field-full align-none" placeholder="Introduce tu apellido" onclick="procesar(26)"/>
   </li>
   <label for="Tipo">Tipo de discapacidad</label>
   <li>
-    <input type="text" id="tipo" name="tipo" class="field-style field-full align-none" placeholder="Introduce tu tipo de discapacidad" />
+    <input type="text" id="inputRegCliente27" name="tipo" class="field-style field-full align-none" placeholder="Introduce tu tipo de discapacidad" onclick="procesar(27)"/>
   </li>
   <label for="Nacimiento">Fecha de nacimiento</label>
   <li>
@@ -25,15 +27,15 @@
   </li>
   <label for="Genero">Género</label>
   <li>
-    <input type="text" id="genero" name="genero" class="field-style field-full align-none" placeholder="Selecciona tu género" />
+    <input type="text" id="inputRegCliente28" name="genero" class="field-style field-full align-none" placeholder="Selecciona tu género" onclick="procesar(28)"/>
   </li>
   <label for="Móvil">Teléfono móvil</label>
   <li>
-    <input type="text" id="movil" name="movil" class="field-style field-full align-none" placeholder="Introduce tu número de celular" />
+    <input type="text" id="inputRegCliente29" name="movil" class="field-style field-full align-none" placeholder="Introduce tu número de celular" onclick="procesar(29)"/>
   </li>
   <label for="Fijo">Teléfono fijo</label>
   <li>
-    <input type="text" id="fijo" name="fijo" class="field-style field-full align-none" placeholder="Introduce tu número fijo" />
+    <input type="text" id="inputRegCliente30" name="fijo" class="field-style field-full align-none" placeholder="Introduce tu número fijo" onclick="procesar(30)"/>
   </li>
   <li>
     <br>
