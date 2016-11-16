@@ -1,27 +1,13 @@
 class ClientesController < ApplicationController
   def mainC
-    if autorizado("Cliente")
-    end
-
     id_cliente = session[:persona_id]
-
-    persona = Person.find_by(id: id_cliente)
-    @nombre = persona.nombre
   end
 
   def perfil
-    if autorizado("Cliente")
-    end 
-    id_cliente = session[:persona_id]
-    @persona = Person.find_by(id: id_cliente)
-    @cliente = Customer.find_by(person_id: id_cliente)
-    @ubicacion = Ubication.find_by(id: @persona.ubication_id)
 
   end
 
   def editarcliente
-    if autorizado("Cliente")
-    end
 
     datos = updatecliente_params
 
@@ -52,8 +38,6 @@ class ClientesController < ApplicationController
   end
 
   def nuevaexperiencia
-    if autorizado("Cliente")
-    end
     experiencia = Experience.new nuevaexperiencia_params
     experiencia.person_id = session[:persona_id]
 
@@ -63,13 +47,9 @@ class ClientesController < ApplicationController
   end
 
   def misCitas
-    if autorizado("Cliente")
-    end
   end
 
   def listaCitas
-    if autorizado("Cliente")
-    end
     datos = pedircita_params
 
     @schedules = Schedule.where( fecha: datos[:fecha] , hora_inicio: datos[:hora])
@@ -80,9 +60,6 @@ class ClientesController < ApplicationController
  end
 
  def crearcita
-  if autorizado("Cliente")
-  end
-
   id_cliente = session[:persona_id]
 
   schedule = Schedule.find_by(id: pedircitac_params[:id])
@@ -100,24 +77,16 @@ end
 
 
 def puntosCercanos
-  if autorizado("Cliente")
-  end
 end
 
 def estilistas
-  if autorizado("Cliente")
-  end
 end
 
 def experiencias
-  if autorizado("Cliente")
-  end
   @experience = Experience.new
 end
 
 def citasProgramadas
-  if autorizado("Cliente")
-  end
   @schedules = Schedule.all.order("created_at ASC")
 end
 
