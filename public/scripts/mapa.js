@@ -1,9 +1,8 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-   center: {lat: -34.397, lng: 150.644},
    zoom: 15
  });
-  var infoWindow = new google.maps.InfoWindow({map: map});
+  //var infoWindow = new google.maps.InfoWindow({map: map});
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
@@ -30,34 +29,35 @@ function initMap() {
   			lng: position.coords.longitude+0.004
   		};
 
-  		var image = 'images/homemarker.png';
-  		var image1 = 'images/barbershopmarker.png';
+  		var home = 'images/homemarker.png';
+  		var barberia = 'images/barberia.png';
+      var peluqueria = 'images/peluqueria.png';
 
   		var marker1 = new google.maps.Marker({
   			position: pos1,
-  			//icon: image1,
-  			title:"Barbería 1"
+  			icon: barberia,
+  			title:"Amsterdan"
   		});
   		var marker2 = new google.maps.Marker({
   			position: pos2,
-  			//icon: image1,
-  			title:"Barbería 2"
+  			icon: peluqueria,
+  			title:"Peluqueria"
   		});
   		var marker3 = new google.maps.Marker({
   			position: pos3,
-  			//icon: image1,
-  			title:"Barbería 3"
+  			icon: barberia,
+  			title:"Barbería"
   		});
   		var marker4 = new google.maps.Marker({
   			position: pos4,
-  			//icon: image1,
-  			title:"Barbería 4"
+  			icon: barberia,
+  			title:"BarberShop Center"
   		});
   		var home = new google.maps.Marker({
   			position: pos,
   			map: map,
-  			icon: image,
-  			title:"Esta es tu casa."
+  			icon: home,
+  			title:"Esta es tu ubicación."
   		});
 
   		marker1.setMap(map);
