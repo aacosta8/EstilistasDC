@@ -2,27 +2,22 @@ class ClientesController < ApplicationController
   def mainC
     if autorizado("Cliente")
     end
-
     id_cliente = session[:persona_id]
-
-    persona = Person.find_by(id: id_cliente)
-    @nombre = persona.nombre
   end
 
   def perfil
     if autorizado("Cliente")
-    end 
+    end
+
     id_cliente = session[:persona_id]
     @persona = Person.find_by(id: id_cliente)
     @cliente = Customer.find_by(person_id: id_cliente)
     @ubicacion = Ubication.find_by(id: @persona.ubication_id)
-
   end
 
   def editarcliente
     if autorizado("Cliente")
     end
-
     datos = updatecliente_params
 
 
@@ -82,7 +77,6 @@ class ClientesController < ApplicationController
  def crearcita
   if autorizado("Cliente")
   end
-
   id_cliente = session[:persona_id]
 
   schedule = Schedule.find_by(id: pedircitac_params[:id])
@@ -95,56 +89,54 @@ class ClientesController < ApplicationController
   cita.stylist_id = pedircitac_params[:estilista_id]
   cita.save
   
-end
-
-def puntosCercanos
-  if autorizado("Cliente")
-  end
-end
-
-def estilistas
-  if autorizado("Cliente")
   end
 
-  @estilistas = Stylist.all.order("created_at ASC")
-end
-
-def experiencias
-  if autorizado("Cliente")
+  def puntosCercanos
+    if autorizado("Cliente")
+    end
   end
-  @experience = Experience.new
-  @experiencias = Experience.all.order("created_at ASC")
-end
 
-def citasProgramadas
-  if autorizado("Cliente")
+  def estilistas
+    if autorizado("Cliente")
+    end
   end
-  @schedules = Schedule.all.order("created_at ASC")
-end
 
-private
+  def experiencias
+    if autorizado("Cliente")
+    end
+    @experience = Experience.new
+    @experiencias = Experience.all.order("created_at ASC")
+  end
 
-def updatecliente_params
-  params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
-end
+  def citasProgramadas
+    if autorizado("Cliente")
+    end
+    @schedules = Schedule.all.order("created_at ASC")
+  end
 
-def updatecliented_params
-  params.require(:customer).permit(:tipo_discapacidad)
-end
+  private
 
-def updateclienteu_params
-  params.require(:ubication).permit(:barrio, :direccion)
-end
+  def updatecliente_params
+    params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
+  end
 
-def nuevaexperiencia_params
-  params.require(:experience).permit(:comentario,:foto_exp)
-end
+  def updatecliented_params
+    params.require(:customer).permit(:tipo_discapacidad)
+  end
 
-def pedircita_params
-  params.permit(:fecha,:hora)
-end
+  def updateclienteu_params
+    params.require(:ubication).permit(:barrio, :direccion)
+  end
 
-def pedircitac_params
-  params.permit(:id, :estilista_id)
-end
+  def nuevaexperiencia_params
+    params.require(:experience).permit(:comentario,:foto_exp)
+  end
+
+  def pedircita_params
+    params.permit(:fecha,:hora)
+  end
+
+  def pedircitac_params
+    params.permit(:id, :estilista_id)
+  end
 end
