@@ -1,23 +1,25 @@
 <link rel="stylesheet" href="css/clientes.css">
-<script type="text/javascript" src="scripts/calificacion.js"></script>
 <br><h1 align="center">Estilistas</h1><br>
-
+<% @estilistas.each do |estilista| %>
 <div align="center">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div><a target="_blank"><img class="estilista" src="images/estilista3.jpg"></a></div>
+        <% if Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).foto_perfil_file_name %>
+        <div><a target="_blank"><img class="estilista" src="<%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).foto_perfil %>"></a></div>
+        <% end %>
         <br>
         <b>Nombre:</b>
-        Andrés Betancur
+        <%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).nombre%>
         <br>
         <br>
         <b>Edad:</b>
-        22 años
+        <%= (Time.now.year  - (Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).fecha_nacimiento).year)
+        %>
         <br>
         <br>
-        <b>Teléfono:</b>
-        273-83-85
+        <b>Teléfono fijo:</b>
+        <%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).telefono_fijo%>
         <br>
         <br>
         <b>Trabaja en:</b>
@@ -31,67 +33,13 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
         <br>
         <br>
-      </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen2" src="images/estilista2.jpg"></a></div>
-        <br>
-        <b>Nombre:</b>
-        Felipe Roldán
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
         <br>
         <br>
-        <b>Edad:</b>
-        26 años
-        <br>
-        <br>
-        <b>Teléfono:</b>
-        283-63-40
-        <br>
-        <br>
-        <b>Trabaja en:</b>
-        Amsterdan
-        <br>
-        <br>
-        <b>Calificación:</b>
-        <div class="row lead"><small><div id="stars" class="starrr"></div></small></div>
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
         <br>
         <br>
       </div>
-      <div class="col-sm-4">
-       <div class="img"><a target="_blank"><img class="estilista" src="images/estilista4.jpg"></a></div>
-       <br>
-       <b>Nombre:</b>
-       Felipe Roldán
-       <br>
-       <br>
-       <b>Edad:</b>
-       26 años
-       <br>
-       <br>
-       <b>Teléfono:</b>
-       283-63-40
-       <br>
-       <br>
-       <b>Trabaja en:</b>
-       Amsterdan
-       <br>
-       <br>
-       <b>Calificación:</b>
-       ★★★★★
-       <br>
-       <br>
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
-       <br>
-       <br>
-     </div>
-   </div>
- </div>
-</div>
-
-
-<!-- Modal para cortes -->
+<% end %>
 <div class="container text-center">
   <div class="modal fade" id="cortes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -105,7 +53,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-             <img class="img-responsive" src="images/ejemplo1.jpg"  alt="...">
+             <img class="img-responsive" src="images/ejemplo1.jpg" alt="...">
              <div class="carousel-caption">
               Corte 1
             </div>
@@ -135,4 +83,34 @@
     </div>
   </div>
 </div>
+</div>
+
+<!-- Modal Opinión-->
+<div class="modal fade" id="opinion" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Opiniones</h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+          <div class="contenido">
+            <div class="form-group row">
+              <label for="nombre" style="text-align:left;">Simona Restrepo dice:</label>
+              <label for="nombre" style="text-align:left;">Excelente estilista</label>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

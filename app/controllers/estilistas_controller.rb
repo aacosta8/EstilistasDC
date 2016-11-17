@@ -1,5 +1,5 @@
 class EstilistasController < ApplicationController
-
+	
 	def mainest
 		if autorizado("Estilista")
 		end
@@ -60,7 +60,6 @@ class EstilistasController < ApplicationController
 		if autorizado("Estilista")
 		end
 
-		puts "Hola"
 
 		cita = Appointment.find_by(id: confirmarcita_params[:id])
 
@@ -68,12 +67,11 @@ class EstilistasController < ApplicationController
 
 		if confirmarcita_params[:confirmar]== "1"
 			cita.estado=1
-			puts "Entró a confirmar"
+
 		end
 
 		if confirmarcita_params[:cancelar]== "2"
 			cita.estado=2
-			puts "Entró a cancelar"
 		end
 
 		if cita.save
@@ -84,25 +82,9 @@ class EstilistasController < ApplicationController
 	def cortesest
 		if autorizado("Estilista")
 		end
-
-
 		@haircut = Haircut.new
-		@cortes = Haircut.all.order("created_at ASC")
-
-		@cortes.each do |corte|
-			puts corte.nombre_corte
-		end
-	end
-
-	def vercorte
-		idcorte= corte_params
-		@cut = Haircut.find_by(id: idcorte[:id])
-
-		@nombre = @cut.nombre_corte
-		@descripcion = @cut.descripcion
-		@foto = @cut.foto
-
-
+		@cortes = Haircut.all.order("created_at ASC")	
+		@cut = Haircut.all.order("created_at ASC")	
 	end
 
 	def agregarcorte
@@ -218,8 +200,7 @@ class EstilistasController < ApplicationController
 
 	def confirmarcita_params
 		params.permit(:confirmar,:cancelar,:id)
-	end
-
+	end	
 
 	def corte_params
 		params.permit(:id)

@@ -89,14 +89,9 @@ class ClientesController < ApplicationController
   cita.stylist_id = pedircitac_params[:estilista_id]
   cita.save
   
-end
+  end
 
 def puntosCercanos
-  if autorizado("Cliente")
-  end
-end
-
-def estilistas
   if autorizado("Cliente")
   end
 end
@@ -112,6 +107,12 @@ def citasProgramadas
   if autorizado("Cliente")
   end
   @schedules = Schedule.all.order("created_at ASC")
+end
+
+def estilistas
+  if autorizado("Cliente")
+  end
+  @estilistas = Stylist.all.order("created_at ASC")
 end
 
 private
