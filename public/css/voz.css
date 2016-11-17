@@ -12,6 +12,6 @@ input[type=text] {
 textarea[type=text] {
   background-color: white;
   background-image: url('../images/micr.png');
-  background-position: 99% 3px;
+  background-position: 99% ;
   background-repeat: no-repeat;
 }

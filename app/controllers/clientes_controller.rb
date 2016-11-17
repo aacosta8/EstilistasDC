@@ -99,6 +99,7 @@ class ClientesController < ApplicationController
   def estilistas
     if autorizado("Cliente")
     end
+    @estilistas = Stylist.all.order("created_at ASC")
   end
 
   def experiencias
