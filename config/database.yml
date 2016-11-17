@@ -7,8 +7,8 @@
 default: &default
   adapter: postgresql
   pool: 5
-  username: jossava
-  password: '123'
+  username: postgres
+  password: 'eafit28*'
   host: localhost
   port: 5432
 

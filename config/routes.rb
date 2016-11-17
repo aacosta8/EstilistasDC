@@ -32,7 +32,6 @@ Rails.application.routes.draw do
 
   get '/cortesest' => 'estilistas#cortesest'
   post '/cortesest' => 'estilistas#agregarcorte'
-  post '/vercorte' => 'estilistas#vercorte'
 
   get '/citaspest' => 'estilistas#citaspest'
   post '/confirmarcita' => 'estilistas#confirmarcita'

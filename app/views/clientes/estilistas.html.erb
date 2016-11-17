@@ -14,7 +14,7 @@
         <br>
         <br>
         <b>Edad:</b>
-        <%= (Time.now.year  -(Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).fecha_nacimiento).year)
+        <%= (Time.now.year  - (Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).fecha_nacimiento).year)
         %>
         <br>
         <br>

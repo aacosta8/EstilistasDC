@@ -16,14 +16,10 @@
         <b>Descripción:</b> <%= (corte.descripcion).slice(0,15) + "..." %>
         <br>
         <br>
-        <%= form_tag '/vercorte' do%>
         <input type="hidden" name="id"  value="<%= corte.id%>">
-        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
-        <% end %>
-
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#leerMas<%= corte.id%>">Leer más</button><br><br>
       </div>
       <% end %>
-
     </div>
   </div>
 </div>
@@ -36,7 +32,8 @@
 
 <!-- Modal Leer más -->
 
-<div class="modal fade" id="leerMas" role="dialog">
+<% @cut.each do |corte| %>
+<div class="modal fade" id="leerMas<%= corte.id%>" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -46,22 +43,22 @@
         <h4 class="modal-title">Corte</h4>
       </div>
       <div class="modal-body">
-       <div><a target="_blank"><img class="imagen1" src="<%= @foto%>"></a></div>
+       <div><a target="_blank"><img class="imagen1" src="<%= corte.foto %>"></a></div>
        <br>
-       <b>Nombre:  </b>  <%= @nombre  %>
+       <b>Nombre:  </b>   <%=  corte.nombre_corte %>
        
        <br>
-       <b>Descripción:</b> <%= @descripcion%>
-       
+       <b>Descripción:</b> <%= corte.descripcion%>
        <br>
        <br>
      </div>
      <div class="modal-footer">
-      <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal" >Cerrar</button>
     </div>
   </div>
 </div>
 </div>
+<% end %>
 
 
 
