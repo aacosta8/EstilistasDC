@@ -2,27 +2,22 @@ class ClientesController < ApplicationController
   def mainC
     if autorizado("Cliente")
     end
-
     id_cliente = session[:persona_id]
-
-    persona = Person.find_by(id: id_cliente)
-    @nombre = persona.nombre
   end
 
   def perfil
     if autorizado("Cliente")
-    end 
+    end
+
     id_cliente = session[:persona_id]
     @persona = Person.find_by(id: id_cliente)
     @cliente = Customer.find_by(person_id: id_cliente)
     @ubicacion = Ubication.find_by(id: @persona.ubication_id)
-
   end
 
   def editarcliente
     if autorizado("Cliente")
     end
-
     datos = updatecliente_params
 
 
@@ -82,7 +77,6 @@ class ClientesController < ApplicationController
  def crearcita
   if autorizado("Cliente")
   end
-
   id_cliente = session[:persona_id]
 
   schedule = Schedule.find_by(id: pedircitac_params[:id])
@@ -105,16 +99,13 @@ end
 def estilistas
   if autorizado("Cliente")
   end
-
-  
-
-
 end
 
 def experiencias
   if autorizado("Cliente")
   end
   @experience = Experience.new
+  @experiencias = Experience.all.order("created_at ASC")
 end
 
 def citasProgramadas

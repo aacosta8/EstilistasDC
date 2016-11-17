@@ -1,19 +1,21 @@
 <link rel="stylesheet" type="text/css" href="../css/botones.css">
 <link rel="stylesheet" type="text/css" href="../css/welcome/contact.css">
+<link rel="stylesheet" href="css/voz.css">
+<script type="text/javascript" src="scripts/voz.js"></script>
 <%= form_tag '/regclientes', class: 'form-style-9' do %>
 
 <ul>
   <label for="Cedula">Cédula</label>
   <li>
-    <input type="text" id="cedula" name="cedula" class="field-style field-full align-none" placeholder="Introduce tu número de identificación" />
+    <input type="text" id="inputRegCliente24" name="cedula" class="field-style field-full align-none" placeholder="Introduce tu número de identificación" onclick="procesar(24)"/>
   </li>
   <label for="Nombre">Nombre</label>
   <li>
-    <input type="text" id="nombre" name="nombre" class="field-style field-full align-none" placeholder="Introduce tu nombre" required/>
+    <input type="text" id="inputRegCliente25" name="nombre" class="field-style field-full align-none" placeholder="Introduce tu nombre" required onclick="procesar(25)"/>
   </li>
   <label for="Apellido">Apellido</label>
   <li>
-    <input type="text" id="apellido" name="apellido" class="field-style field-full align-none" placeholder="Introduce tu apellido" />
+    <input type="text" id="inputRegCliente26" name="apellido" class="field-style field-full align-none" placeholder="Introduce tu apellido" onclick="procesar(26)"/>
   </li>
   <label for="Tipo">Tipo de discapacidad</label>
   <li>
@@ -31,7 +33,7 @@
   </li>
   <label for="Fijo">Teléfono fijo</label>
   <li>
-    <input type="text" id="fijo" name="fijo" class="field-style field-full align-none" placeholder="Introduce tu número fijo" />
+    <input type="text" id="inputRegCliente30" name="fijo" class="field-style field-full align-none" placeholder="Introduce tu número fijo" onclick="procesar(30)"/>
   </li>
   <label for="Movil">Teléfono móvil</label>
   <li>
@@ -43,15 +45,3 @@
   </li>
 </ul>
 <% end %>
-<!-- <form role="form">
-
-  <div class="form-group">
-    <label for="Tipo">Tipo de discapacidad</label>
-    <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Introduce tu tipo de discapacidad">
-  </div>
-
-  <button type="submit" class="btn btn-default">Enviar</button>
-
-
-</form> -->
-

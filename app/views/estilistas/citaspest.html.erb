@@ -24,7 +24,7 @@
         <td><%= Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).telefono_fijo%></td>
         <td><%= Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).telefono_movil%></td>
         <td><%= cita.fecha%></td>
-        <td><%= cita.hora_inicio%></td>
+        <td><%= x = '%02d' % (cita.hora_inicio.hour) %>:<%= x = '%02d' % (cita.hora_inicio.min) %></td>
         <td><%= Ubication.find_by(id: (Person.find_by(id: (Customer.find_by(id: cita.customer_id).person_id)).ubication_id)).direccion%></td>
         <td> <button name="confirmar" value="1" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button></td>
         <td> <button name="cancelar" value="2" type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></button></td>

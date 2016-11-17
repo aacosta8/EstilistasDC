@@ -10,18 +10,8 @@ input[type=text] {
   height: 40px;
 }
 textarea[type=text] {
-  width: 100%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
   background-color: white;
   background-image: url('../images/micr.png');
   background-position: 99% 3px;
   background-repeat: no-repeat;
-  padding: 120px 200px 120px 400px;
-}
-
-input{
-  width: 6px;
 }

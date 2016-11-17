@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="css/clientes.css">
+<link rel="stylesheet" href="css/voz.css">
+<script type="text/javascript" src="scripts/voz.js"></script>
 <br><h1 align="center">Experiencias</h1><br>
+<% @experiencias.each do |experiencia| %>
 <div align="center">
   <div class="container">
     <div class="row">
@@ -7,59 +10,26 @@
         <div><a target="_blank"><img class="imagen1" src="images/corte1.jpg"></a></div>
         <br>
         <b>Fecha:</b>
-        18/10/2016
+        <%= Time.at(experiencia.created_at).to_date %>
         <br>
         <br>
         <b>Autor:</b>
-        Jorge Vásquez
+        <%= Person.find_by(id: session[:persona_id]).nombre %>
         <br>
         <br>
         <b>Relato:</b>
-        El autor lamenta la pérdida del glamour en el panorama cinematográfico actual...
+        <%= (experiencia.comentario).slice(0,15) + "..." %>
         <br>
         <br>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
       </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte2.jpg"></a></div>
-        <br>
-        <b>Fecha:</b>
-        18/10/2016
-        <br>
-        <br>
-        <b>Autor:</b>
-        Jorge Vásquez
-        <br>
-        <br>
-        <b>Relato:</b>
-        El autor lamenta la pérdida del glamour en el panorama cinematográfico actual...
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
-      </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte3.jpg"></a></div>
-        <br>
-        <b>Fecha:</b>
-        18/10/2016
-        <br>
-        <br>
-        <b>Autor:</b>
-        Jorge Vásquez
-        <br>
-        <br>
-        <b>Relato:</b>
-        El autor lamenta la pérdida del glamour en el panorama cinematográfico actual...
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br>
       </div>
     </div>
-  </div>
-</div>
-
+    </div>
+    <% end %>
 <br><div style="padding-left: 45%;" class="boton">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Nueva experiencia</button></div>
+
 
 <!-- Modal Nueva experiencia -->
 <div class="modal fade" id="myModal" role="dialog">

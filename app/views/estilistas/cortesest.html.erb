@@ -1,76 +1,66 @@
 <link rel="stylesheet" type="text/css" href="css/estilistas.css">
 <br><h1 align="center">Cortes</h1><br>
+
+
 <div align="center">
   <div class="container">
     <div class="row">
+      <% @cortes.each do |corte| %>
+      
       <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte5.jpg"></a></div>
+
+        <div><a target="_blank"><img class="imagen1" src="<%= corte.foto %>"></a></div>
         <br>
-        <b>Nombre:</b> 
-        Skin fade
+        <b>Nombre:</b>  <%=  corte.nombre_corte %>
         <br>
-        <b>Descripción:</b>
-        Este corte se caracteriza por...
+        <b>Descripción:</b> <%= (corte.descripcion).slice(0,15) + "..." %>
         <br>
         <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
+        <input type="hidden" name="id"  value="<%= corte.id%>">
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#leerMas<%= corte.id%>">Leer más</button><br><br>
       </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte2.jpg"></a></div>
-        <br>
-        <b>Nombre:</b> 
-        Skin fade
-        <br>
-        <b>Descripción:</b>
-        Este corte se caracteriza por...
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
-      </div>
-      <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte6.jpg"></a></div>
-        <br>
-        <b>Nombre:</b> 
-        Skin fade
-        <br>
-        <b>Descripción:</b>
-        Este corte se caracteriza por...
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
 
-<br><div style="padding-left: 46%;" class="boton">
+
+
+
+<br><div style="padding-left: 44%;" class="boton">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarCorte">Agregar corte</button></div>
 
 <!-- Modal Leer más -->
-<div class="modal fade" id="leerMas" role="dialog">
+
+<% @cut.each do |corte| %>
+<div class="modal fade" id="leerMas<%= corte.id%>" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Experiencia</h4>
+        <h4 class="modal-title">Corte</h4>
       </div>
       <div class="modal-body">
-       <div><a target="_blank"><img class="imgmodal" src="images/corte5.jpg"></a></div>
+       <div><a target="_blank"><img class="imagen1" src="<%= corte.foto %>"></a></div>
        <br>
-       <b>Descripción:</b>
-       Este corte se caracteriza por ser la última tendencia de la moda.
+       <b>Nombre:  </b>   <%=  corte.nombre_corte %>
+       
+       <br>
+       <b>Descripción:</b> <%= corte.descripcion%>
        <br>
        <br>
      </div>
      <div class="modal-footer">
-      <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal" >Cerrar</button>
     </div>
   </div>
+</div>
+</div>
+<% end %>
 
-</div>
-</div>
+
 
 <!-- Modal Agregar corte -->
 <div class="modal fade" id="agregarCorte" role="dialog">

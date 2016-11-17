@@ -8,6 +8,10 @@ class EstilistasController < ApplicationController
 		persona = Person.find_by(id: id_estilista)
 
 		@nombre = persona.nombre
+
+                id_estilista = Stylist.find_by(person_id: session[:persona_id]).id
+
+                @citassol = Appointment.where(stylist_id: id_estilista , estado: 0)
 	end
 
 	def agendaest
@@ -80,7 +84,25 @@ class EstilistasController < ApplicationController
 	def cortesest
 		if autorizado("Estilista")
 		end
+
+
 		@haircut = Haircut.new
+		@cortes = Haircut.all.order("created_at ASC")
+
+		@cortes.each do |corte|
+			puts corte.nombre_corte
+		end
+	end
+
+	def vercorte
+		idcorte= corte_params
+		@cut = Haircut.find_by(id: idcorte[:id])
+
+		@nombre = @cut.nombre_corte
+		@descripcion = @cut.descripcion
+		@foto = @cut.foto
+
+
 	end
 
 	def agregarcorte
@@ -116,32 +138,32 @@ class EstilistasController < ApplicationController
 		end
 
 
-    datos = updateestilista_params
+		datos = updateestilista_params
 
 
-    id_estilista = session[:persona_id]
+		id_estilista = session[:persona_id]
 
-    ubicacion = Ubication.new
-    ubicacion.direccion = updateestilistau_params[:direccion]
-    ubicacion.barrio = updateestilistau_params[:barrio]
+		ubicacion = Ubication.new
+		ubicacion.direccion = updateestilistau_params[:direccion]
+		ubicacion.barrio = updateestilistau_params[:barrio]
 
-    if ubicacion.save
-      persona = Person.find_by(id: id_estilista) 
-      persona.nombre = datos[:nombre]
-      persona.apellido = datos[:apellido]
-      persona.fecha_nacimiento = datos[:fecha_nacimiento]
-      persona.telefono_movil = datos[:telefono_movil]
-      persona.telefono_fijo = datos[:telefono_fijo]
-      persona.foto_perfil = datos[:foto_perfil]
-      persona.ubication_id = ubicacion.id
+		if ubicacion.save
+			persona = Person.find_by(id: id_estilista) 
+			persona.nombre = datos[:nombre]
+			persona.apellido = datos[:apellido]
+			persona.fecha_nacimiento = datos[:fecha_nacimiento]
+			persona.telefono_movil = datos[:telefono_movil]
+			persona.telefono_fijo = datos[:telefono_fijo]
+			persona.foto_perfil = datos[:foto_perfil]
+			persona.ubication_id = ubicacion.id
 
-      estilista = Stylist.find_by(person_id: id_estilista)
-      estilista.correo_electronico = updateestilistad_params[:correo_electronico]
+			estilista = Stylist.find_by(person_id: id_estilista)
+			estilista.correo_electronico = updateestilistad_params[:correo_electronico]
 
-      if estilista.save and persona.save
-        redirect_to perfilest_path
-      end
-    end
+			if estilista.save and persona.save
+				redirect_to perfilest_path
+			end
+		end
 
 	end 
 
@@ -175,16 +197,16 @@ class EstilistasController < ApplicationController
 	private
 
 	def updateestilista_params
-  params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
-end
+		params.require(:person).permit(:nombre, :apellido, :fecha_nacimiento, :telefono_movil, :telefono_fijo, :foto_perfil)
+	end
 
-def updateestilistad_params
-  params.require(:stylist).permit(:correo_electronico)
-end
+	def updateestilistad_params
+		params.require(:stylist).permit(:correo_electronico)
+	end
 
-def updateestilistau_params
-  params.require(:ubication).permit(:barrio, :direccion)
-end
+	def updateestilistau_params
+		params.require(:ubication).permit(:barrio, :direccion)
+	end
 
 	def nuevaexperiencia_params
 		params.require(:experience).permit(:comentario,:foto_exp)
@@ -196,5 +218,10 @@ end
 
 	def confirmarcita_params
 		params.permit(:confirmar,:cancelar,:id)
+	end
+
+
+	def corte_params
+		params.permit(:id)
 	end
 end

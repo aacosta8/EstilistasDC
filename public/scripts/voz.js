@@ -80,6 +80,22 @@ if (!('webkitSpeechRecognition' in window)) {
       id="inputContacto21";
     }else if(idp==22){
       id="inputContacto22";
+    }else if(idp==23){
+      id="inputExperiencia23";
+    }else if(idp==24){
+      id="inputRegCliente24";
+    }else if(idp==25){
+      id="inputRegCliente25";
+    }else if(idp==26){
+      id="inputRegCliente26";
+    }else if(idp==27){
+      id="inputRegCliente27";
+    }else if(idp==28){
+      id="inputRegCliente28";
+    }else if(idp==29){
+      id="inputRegCliente29";
+    }else if(idp==30){
+      id="inputRegCliente30";
     }
     if (recognizing == false) {
       recognition.start();
