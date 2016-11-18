@@ -1,9 +1,19 @@
 <link rel="stylesheet" type="text/css" href="css/estilistas.css">
+<link rel="stylesheet" type="text/css" href="css/alerta.css"/>
 <br>
 <h1 align="center">Agenda</h1><br>
 <div align="center">
   <div class="container1">
     <%= form_tag '/agendaest/guardar', class: 'form-style-9' do %>
+    <% if flash[:notice] %>
+
+        <div class="alert alert-danger alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+    <strong><%= flash[:notice] %> </strong>
+    </div>
+
+<% end %>
+
     <div class="form-group row">
       <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
       <div class="col-sm-10">

@@ -44,7 +44,10 @@ class EstilistasController < ApplicationController
 			horario.hora_fin = ((inicial/60).to_s + ":" + (inicial%60).to_s ).to_time
 			horario.stylist_id = estilista.id
 
-			horario.save
+			if horario.save
+                        	flash[:notice] = "Horario agregado exitosamente"
+                        	#redirect_to agendaest_path
+                        end
 		end
 	end
 
