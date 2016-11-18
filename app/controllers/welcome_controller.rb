@@ -68,7 +68,11 @@ class WelcomeController < ApplicationController
     cliente.person_id = person.id
     cliente.tipo_discapacidad =datos[:tipo] 
 
-    cliente.save
+    if cliente.save
+      flash[:notice] = "Su registro ha sido exitoso"
+      redirect_to regcliente_path
+    end
+  
   end
 
   def regestilistas
@@ -93,7 +97,10 @@ class WelcomeController < ApplicationController
     estilista.especialidad = datos[:especialidad]
     estilista.correo_electronico = datos[:correo] 
 
-    estilista.save
+    if estilista.save
+      flash[:notice] = "Su registro ha sido exitoso"
+      redirect_to regestilista_path
+    end
   end
 
 

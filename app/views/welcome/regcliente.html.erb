@@ -1,8 +1,16 @@
 <link rel="stylesheet" type="text/css" href="../css/botones.css">
 <link rel="stylesheet" type="text/css" href="../css/welcome/contact.css">
 <link rel="stylesheet" href="css/voz.css">
+<link rel="stylesheet" type="text/css" href="css/alerta.css"/>
+
 <script type="text/javascript" src="scripts/voz.js"></script>
 <%= form_tag '/regclientes', class: 'form-style-9' do %>
+<% if flash[:notice] %>
+<div class="alert alert-success alert-dismissable" >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong><%= flash[:notice] %> </strong>
+</div>
+<% end %>
 
 <ul>
   <label for="Cedula">Cédula</label>
