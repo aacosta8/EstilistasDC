@@ -1,10 +1,11 @@
 <link rel="stylesheet" type="text/css" href="../css/mainest.css">
 <br>
-<h1 align="center">¡Bienvenido <%= @nombre%>!</h1>
+<h1 align="center">¡Bienvenid@ <%= @nombre%>!</h1>
 <div class="notifications">
   <div class="toggle"></div>
-  <div class="messages">
-    <a href="#" class="message">Cita confirmada</a>
-    <a href="#" class="message">Cita cancelada</a>
+   <div class="messages">
+  	<% @citascon.each do |cita| %>
+    <a  class="message">Su cita del día <%= cita.fecha%> ha sido confirmada.</a>
   </div>
 </div>
+<% end %>

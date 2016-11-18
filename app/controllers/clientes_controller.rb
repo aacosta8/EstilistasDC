@@ -1,8 +1,16 @@
 class ClientesController < ApplicationController
   def mainC
-    if autorizado("Cliente")
+     if autorizado("Cliente")
     end
     id_cliente = session[:persona_id]
+
+    persona = Person.find_by(id: id_cliente)
+
+    @nombre = persona.nombre
+
+    id_cliente = Customer.find_by(person_id: session[:persona_id]).id
+
+    @citascon = Appointment.where(customer_id: id_cliente, estado: 1)
   end
 
   def perfil
@@ -114,6 +122,7 @@ def estilistas
   if autorizado("Cliente")
   end
   @estilistas = Stylist.all.order("created_at ASC")
+  @estilistasm = Stylist.all.order("created_at ASC")
 end
 
 private

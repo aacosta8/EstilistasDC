@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="css/clientes.css">
 <br><h1 align="center">Estilistas</h1><br>
-<% @estilistas.each do |estilista| %>
+
 <div align="center">
   <div class="container">
     <div class="row">
+      <% @estilistas.each do |estilista| %>
       <div class="col-sm-4">
         <% if Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).foto_perfil_file_name %>
         <div><a target="_blank"><img class="estilista" src="<%= Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).foto_perfil %>"></a></div>
@@ -23,25 +24,30 @@
         <br>
         <br>
         <b>Trabaja en:</b>
-        Barber Shop
+        <%= Ubication.find_by(id: Person.find_by(id: Stylist.find_by(id: estilista.id).person_id).ubication_id).barrio%>
         <br>
         <br>
         <b>Calificación:</b>
         ★★★★★
         <br>
         <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes">Cortes</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#opinion">Opiniones</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cortes<%=estilista.id %>">Cortes</button>
         <br>
         <br>
         <br>
         <br>
       </div>
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="container text-center">
-  <div class="modal fade" id="cortes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<% @estilistasm.each do |estilista| %>
+  <div class="modal fade" id="cortes<%=estilista.id %>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -49,25 +55,12 @@
           <h4 align="left" class="modal-title">Cortes</h4>
         </div>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-             <img class="img-responsive" src="images/ejemplo1.jpg" alt="...">
+             <img class="img-responsive" src="<%= Haircut.find_by(id: HaircutStylist.find_by(stylist_id: estilista.id).haircut_id).foto%>" alt="...">
              <div class="carousel-caption">
               Corte 1
-            </div>
-          </div>
-          <div class="item">
-            <img class="img-responsive" src="images/cut1.jpg" alt="...">
-            <div class="carousel-caption">
-              Corte 2
-            </div>
-          </div>
-          <div class="item">
-            <img class="img-responsive" src="images/cut3.jpg" alt="...">
-            <div class="carousel-caption">
-              Corte 3
             </div>
           </div>
         </div>
@@ -83,6 +76,7 @@
     </div>
   </div>
 </div>
+<% end %>
 </div>
 
 <!-- Modal Opinión-->
