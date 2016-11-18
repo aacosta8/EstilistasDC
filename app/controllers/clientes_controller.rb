@@ -101,6 +101,7 @@ def experiencias
   end
   @experience = Experience.new
   @experiencias = Experience.all.order("created_at ASC")
+  @experienciasm = Experience.all.order("created_at ASC")
 end
 
 def citasProgramadas

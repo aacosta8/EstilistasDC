@@ -2,31 +2,33 @@
 <link rel="stylesheet" href="css/voz.css">
 <script type="text/javascript" src="scripts/voz.js"></script>
 <br><h1 align="center">Experiencias</h1><br>
-<% @experiencias.each do |experiencia| %>
+
 <div align="center">
   <div class="container">
     <div class="row">
+      <% @experiencias.each do |experiencia| %>
       <div class="col-sm-4">
-        <div><a target="_blank"><img class="imagen1" src="images/corte1.jpg"></a></div>
+        <div><a target="_blank"><img class="imagen1" src="<%=experiencia.foto_exp%>"></a></div>
         <br>
         <b>Fecha:</b>
         <%= Time.at(experiencia.created_at).to_date %>
         <br>
         <br>
         <b>Autor:</b>
-        <%= Person.find_by(id: session[:persona_id]).nombre %>
+        <%=Person.find_by(id: experiencia.person_id).nombre %>
         <br>
         <br>
         <b>Relato:</b>
         <%= (experiencia.comentario).slice(0,15) + "..." %>
         <br>
         <br>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas">Leer más</button><br><br>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leerMas<%= experiencia.id%>">Leer más</button><br><br>
       </div>
-      </div>
+      <% end %>
     </div>
-    </div>
-    <% end %>
+  </div>
+</div>
+
 <br><div style="padding-left: 45%;" class="boton">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Nueva experiencia</button></div>
 
@@ -48,7 +50,8 @@
 </div>
 
 <!-- Modal Leer más -->
-<div class="modal fade" id="leerMas" role="dialog">
+<% @experienciasm.each do |experiencia| %>
+<div class="modal fade" id="leerMas<%= experiencia.id%>" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -58,18 +61,18 @@
         <h4 class="modal-title">Experiencia</h4>
       </div>
       <div class="modal-body">
-       <div><a target="_blank"><img class="imgmodal" src="images/corte2.jpg"></a></div>
+       <div><a target="_blank"><img class="imgmodal" src="<%=experiencia.foto_exp%>"></a></div>
        <br>
        <b>Fecha:</b>
-       18/10/2016
+       <%= Time.at(experiencia.created_at).to_date %>
        <br>
        <br>
        <b>Autor:</b>
-       Jorge Vásquez
+       <%=Person.find_by(id: experiencia.person_id).nombre %>
        <br>
        <br>
        <b>Relato:</b>
-       El autor lamenta la pérdida del glamour en el panorama cinematográfico actual, como consecuencia de la repetición de estereotipos vulgares que imitan, sin imaginación ni encanto, los esquemas de la vida real.
+       <%= experiencia.comentario %>
        <br>
        <br>
      </div>
@@ -80,4 +83,5 @@
 
 </div>
 </div>
+<% end %>
 

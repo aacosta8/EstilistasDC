@@ -1,5 +1,5 @@
 class EstilistasController < ApplicationController
-	
+
 	def mainest
 		if autorizado("Estilista")
 		end
@@ -9,9 +9,9 @@ class EstilistasController < ApplicationController
 
 		@nombre = persona.nombre
 
-                id_estilista = Stylist.find_by(person_id: session[:persona_id]).id
+		id_estilista = Stylist.find_by(person_id: session[:persona_id]).id
 
-                @citassol = Appointment.where(stylist_id: id_estilista , estado: 0)
+		@citassol = Appointment.where(stylist_id: id_estilista , estado: 0)
 	end
 
 	def agendaest
@@ -154,7 +154,8 @@ class EstilistasController < ApplicationController
 		end
 
 		@experience = Experience.new
-
+		@experiencias = Experience.all.order("created_at ASC")
+		@experienciasm = Experience.all.order("created_at ASC")
 	end
 
 	def nuevaverexpest
