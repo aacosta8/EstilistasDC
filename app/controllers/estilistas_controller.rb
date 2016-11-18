@@ -143,6 +143,7 @@ class EstilistasController < ApplicationController
 			estilista.correo_electronico = updateestilistad_params[:correo_electronico]
 
 			if estilista.save and persona.save
+				flash[:notice] = "Se actualizaron los datos con éxito"
 				redirect_to perfilest_path
 			end
 		end

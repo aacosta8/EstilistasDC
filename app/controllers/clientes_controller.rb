@@ -49,6 +49,7 @@ class ClientesController < ApplicationController
       cliente.tipo_discapacidad = updatecliented_params[:tipo_discapacidad]
 
       if cliente.save and persona.save
+        flash[:notice] = "Se actualizaron los datos con éxito"
         redirect_to perfil_path
       end
     end

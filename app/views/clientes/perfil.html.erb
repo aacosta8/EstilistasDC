@@ -1,16 +1,30 @@
-	<link rel="stylesheet" href="css/voz.css">
-	<script type="text/javascript" src="scripts/voz.js"></script>
-	<style>
-		.container{
-			width: 70%;
-			text-align: left;
-		}
-		.alinear{
-			text-align:center;
-			margin:auto;
-		}
-	</style>
-	<br>
-	<h1 align="center">Perfil</h1>
+<link rel="stylesheet" href="css/voz.css">
+<link rel="stylesheet" type="text/css" href="css/alerta.css"/>
+<script type="text/javascript" src="scripts/voz.js"></script>
+<style>
+	.container{
+		width: 70%;
+		text-align: left;
+	}
+	.alinear{
+		text-align:center;
+		margin:auto;
+	}
+</style>
+<br>
+<h1 align="center">Perfil</h1>
 
-	<%= render "perfilfom" %>
+
+<% if flash[:notice] %>
+<br><br>
+<container align="center">
+<div class="alert alert-success alert-dismissable" >
+
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	<strong><%= flash[:notice] %> </strong>
+</div>
+</container>
+<br><br>
+<% end %>
+
+<%= render "perfilfom" %>
